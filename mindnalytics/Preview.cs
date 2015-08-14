@@ -12,7 +12,7 @@ namespace mindnalytics
 {
     public partial class Preview : Form
     {
-        List<PictureBox> listaGrupos = new List<PictureBox>();
+        List<PictureBox> listaImagenes = new List<PictureBox>();
 
         public Preview(Dictionary<Asset, int> assetPreview)
         {
@@ -28,6 +28,17 @@ namespace mindnalytics
                 addImage(item.Key);
                 //pictureBox2.Image = Image.FromFile(item.Key.Path);
             }
+            /*
+            if (listaImagenes.Count > 1) { 
+                int i = 1;
+                while (i < listaImagenes.Count)
+                {
+                    listaImagenes[i].Parent = listaImagenes[i++];
+                    //i++;
+                }
+            }*/
+            
+            
 
         }
 
@@ -43,7 +54,7 @@ namespace mindnalytics
             pictureBoxX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 
             this.Controls.Add(pictureBoxX);
-            listaGrupos.Add(pictureBoxX);
+            listaImagenes.Add(pictureBoxX);
             //pictureBox2.Parent = pictureBox1;
 
         

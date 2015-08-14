@@ -106,13 +106,13 @@ namespace mindnalytics
                 txtNarrFinal.Text = file;
             }
         }
-        public Dictionary<Asset, int> assetPreview = new Dictionary<Asset, int>();
+        
         private void btnPreview_Click(object sender, EventArgs e)
         {
             
             
 
-
+            Dictionary<Asset, int> assetPreview = new Dictionary<Asset, int>();
             
 
 
