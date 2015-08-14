@@ -28,15 +28,32 @@ namespace mindnalytics
                 addImage(item.Key);
                 //pictureBox2.Image = Image.FromFile(item.Key.Path);
             }
-            /*
-            if (listaImagenes.Count > 1) { 
+            
+            if (listaImagenes.Count > 2) {
+                /*
+                System.Windows.Forms.PictureBox lastImage;
+                int i = 0;
+                foreach (var imagen in listaImagenes)
+                {
+                    if (i > 1)
+                    {
+                        imagen.Parent = lastImage;
+
+                    }
+                    lastImage = imagen;
+                    i++;
+
+                }
+                 */
+                
                 int i = 1;
                 while (i < listaImagenes.Count)
                 {
-                    listaImagenes[i].Parent = listaImagenes[i++];
-                    //i++;
+                    listaImagenes[i].Parent = listaImagenes[i-1];
+                    i++;
                 }
-            }*/
+                 
+            }
             
             
 

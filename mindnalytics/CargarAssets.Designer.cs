@@ -105,7 +105,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1139, 798);
+            this.splitContainer1.Size = new System.Drawing.Size(1139, 741);
             this.splitContainer1.SplitterDistance = 239;
             this.splitContainer1.TabIndex = 18;
             // 
@@ -143,8 +143,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
-            this.splitContainer2.Size = new System.Drawing.Size(896, 798);
-            this.splitContainer2.SplitterDistance = 157;
+            this.splitContainer2.Size = new System.Drawing.Size(896, 741);
+            this.splitContainer2.SplitterDistance = 145;
             this.splitContainer2.TabIndex = 18;
             // 
             // txtNarrInicial
@@ -174,6 +174,7 @@
             this.btnNarrInicial.TabIndex = 18;
             this.btnNarrInicial.Text = "...";
             this.btnNarrInicial.UseVisualStyleBackColor = true;
+            this.btnNarrInicial.Click += new System.EventHandler(this.btnNarrInicial_Click_1);
             // 
             // txtNeutral
             // 
@@ -222,6 +223,7 @@
             this.btnNeutral.TabIndex = 26;
             this.btnNeutral.Text = "...";
             this.btnNeutral.UseVisualStyleBackColor = true;
+            this.btnNeutral.Click += new System.EventHandler(this.btnNeutral_Click_1);
             // 
             // btnNarrFinal
             // 
@@ -232,6 +234,7 @@
             this.btnNarrFinal.TabIndex = 22;
             this.btnNarrFinal.Text = "...";
             this.btnNarrFinal.UseVisualStyleBackColor = true;
+            this.btnNarrFinal.Click += new System.EventHandler(this.btnNarrFinal_Click_1);
             // 
             // btnEndConfig
             // 
@@ -265,7 +268,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1139, 798);
+            this.ClientSize = new System.Drawing.Size(1139, 741);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

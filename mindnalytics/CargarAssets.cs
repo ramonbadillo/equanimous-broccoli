@@ -151,5 +151,38 @@ namespace mindnalytics
             }
 
         }
+
+        private void btnNarrInicial_Click_1(object sender, EventArgs e)
+        {
+            openFileDialog2.Filter = "Sound Files (wav,ogg,m4a)|*.wav;*.ogg;*.m4a";
+            DialogResult result = openFileDialog2.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog2.FileName;
+                txtNarrInicial.Text = file;
+            }
+        }
+
+        private void btnNarrFinal_Click_1(object sender, EventArgs e)
+        {
+            openFileDialog2.Filter = "Sound Files (wav,ogg,m4a)|*.wav;*.ogg;*.m4a";
+            DialogResult result = openFileDialog2.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog2.FileName;
+                txtNarrFinal.Text = file;
+            }
+        }
+
+        private void btnNeutral_Click_1(object sender, EventArgs e)
+        {
+            openFileDialog2.Filter = "Image Files (jpg,jpeg,png)|*.jpg;*.jpeg;*.png";
+            DialogResult result = openFileDialog2.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog2.FileName;
+                txtNarrFinal.Text = file;
+            }
+        }
     }
 }
