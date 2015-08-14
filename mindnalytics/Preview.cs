@@ -28,6 +28,7 @@ namespace mindnalytics
                 addImage(item.Key);
                 //pictureBox2.Image = Image.FromFile(item.Key.Path);
             }
+
         }
 
         private void addImage(Asset assetImage){
@@ -40,6 +41,7 @@ namespace mindnalytics
             pictureBoxX.Name = "pictureBox2";
             pictureBoxX.Size = new System.Drawing.Size(521, 377);
             pictureBoxX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+
             this.Controls.Add(pictureBoxX);
             listaGrupos.Add(pictureBoxX);
             //pictureBox2.Parent = pictureBox1;
