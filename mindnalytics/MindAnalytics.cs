@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace mindnalytics
 {
-    public partial class Form1 : Form
+    public partial class MindAnalytics : Form
     {
-        public Form1()
+        public MindAnalytics()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CargarAssets cargar = new CargarAssets();
+            cargar.ShowDialog();
         }
     }
 }

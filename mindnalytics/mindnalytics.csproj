@@ -44,25 +44,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asset.cs" />
     <Compile Include="CargarAssets.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CargarAssets.Designer.cs">
       <DependentUpon>CargarAssets.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MindAnalytics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MindAnalytics.Designer.cs">
+      <DependentUpon>MindAnalytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preview.Designer.cs">
+      <DependentUpon>Preview.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GrupoAssets.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrupoAssets.Designer.cs">
+      <DependentUpon>GrupoAssets.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CargarAssets.resx">
       <DependentUpon>CargarAssets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MindAnalytics.resx">
+      <DependentUpon>MindAnalytics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preview.resx">
+      <DependentUpon>Preview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +89,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GrupoAssets.resx">
+      <DependentUpon>GrupoAssets.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,12 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GrupoAssets\GrupoAssets.csproj">
-      <Project>{B9244192-4640-4B20-A64E-37A65C064329}</Project>
-      <Name>GrupoAssets</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
