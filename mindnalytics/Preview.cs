@@ -24,7 +24,7 @@ namespace mindnalytics
             
             foreach (var item in sortedDict)
 	        {
-                Console.WriteLine(item.Key.Path);
+                Console.WriteLine(item.Key.path);
                 addImage(item.Key);
                 //pictureBox2.Image = Image.FromFile(item.Key.Path);
             }
@@ -64,10 +64,10 @@ namespace mindnalytics
             System.Windows.Forms.PictureBox pictureBoxX;
             pictureBoxX = new System.Windows.Forms.PictureBox();
             pictureBoxX.BackColor = System.Drawing.Color.Transparent;
-            pictureBoxX.Image = Image.FromFile(assetImage.Path);
-            pictureBoxX.Location = new System.Drawing.Point(assetImage.X, assetImage.Y);
+            pictureBoxX.Image = Image.FromFile(assetImage.path);
+            pictureBoxX.Location = new System.Drawing.Point(assetImage.x, assetImage.y);
             pictureBoxX.Name = "pictureBox2";
-            pictureBoxX.Size = new System.Drawing.Size(521, 377);
+            //pictureBoxX.Size = new System.Drawing.Size(521, 377);
             pictureBoxX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 
             this.Controls.Add(pictureBoxX);

@@ -36,18 +36,15 @@
             this.btnAddAsset = new System.Windows.Forms.Button();
             this.numZOrder = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNarr = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.tablaAssets = new System.Windows.Forms.DataGridView();
-            this.btnNarr = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Y = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numZOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaAssets)).BeginInit();
@@ -62,22 +59,19 @@
             this.groupBox1.Controls.Add(this.btnAddAsset);
             this.groupBox1.Controls.Add(this.numZOrder);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtNarr);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.tablaAssets);
-            this.groupBox1.Controls.Add(this.btnNarr);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(834, 488);
+            this.groupBox1.Size = new System.Drawing.Size(834, 440);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Grupo de Assets # ";
             // 
             // btnDeleteGroup
             // 
-            this.btnDeleteGroup.Location = new System.Drawing.Point(588, 443);
+            this.btnDeleteGroup.Location = new System.Drawing.Point(588, 397);
             this.btnDeleteGroup.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteGroup.Name = "btnDeleteGroup";
             this.btnDeleteGroup.Size = new System.Drawing.Size(228, 28);
@@ -88,7 +82,7 @@
             // 
             // btnDwnAsset
             // 
-            this.btnDwnAsset.Location = new System.Drawing.Point(762, 272);
+            this.btnDwnAsset.Location = new System.Drawing.Point(762, 226);
             this.btnDwnAsset.Margin = new System.Windows.Forms.Padding(4);
             this.btnDwnAsset.Name = "btnDwnAsset";
             this.btnDwnAsset.Size = new System.Drawing.Size(53, 47);
@@ -99,7 +93,7 @@
             // 
             // btnUpAsset
             // 
-            this.btnUpAsset.Location = new System.Drawing.Point(762, 200);
+            this.btnUpAsset.Location = new System.Drawing.Point(762, 154);
             this.btnUpAsset.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpAsset.Name = "btnUpAsset";
             this.btnUpAsset.Size = new System.Drawing.Size(53, 47);
@@ -110,7 +104,7 @@
             // 
             // btnRmvAsset
             // 
-            this.btnRmvAsset.Location = new System.Drawing.Point(14, 272);
+            this.btnRmvAsset.Location = new System.Drawing.Point(14, 226);
             this.btnRmvAsset.Margin = new System.Windows.Forms.Padding(4);
             this.btnRmvAsset.Name = "btnRmvAsset";
             this.btnRmvAsset.Size = new System.Drawing.Size(53, 47);
@@ -121,7 +115,7 @@
             // 
             // btnAddAsset
             // 
-            this.btnAddAsset.Location = new System.Drawing.Point(14, 200);
+            this.btnAddAsset.Location = new System.Drawing.Point(14, 154);
             this.btnAddAsset.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAsset.Name = "btnAddAsset";
             this.btnAddAsset.Size = new System.Drawing.Size(53, 47);
@@ -149,24 +143,6 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "Orden Z :";
             // 
-            // txtNarr
-            // 
-            this.txtNarr.Location = new System.Drawing.Point(132, 64);
-            this.txtNarr.Margin = new System.Windows.Forms.Padding(5);
-            this.txtNarr.Name = "txtNarr";
-            this.txtNarr.Size = new System.Drawing.Size(576, 22);
-            this.txtNarr.TabIndex = 31;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 16);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Narrativa :";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -177,13 +153,13 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Nombre : ";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 27);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(440, 22);
-            this.textBox1.TabIndex = 28;
+            this.txtName.Location = new System.Drawing.Point(132, 27);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(440, 22);
+            this.txtName.TabIndex = 28;
             // 
             // tablaAssets
             // 
@@ -196,7 +172,7 @@
             this.Y,
             this.Time,
             this.Path});
-            this.tablaAssets.Location = new System.Drawing.Point(77, 117);
+            this.tablaAssets.Location = new System.Drawing.Point(77, 71);
             this.tablaAssets.Margin = new System.Windows.Forms.Padding(5);
             this.tablaAssets.MultiSelect = false;
             this.tablaAssets.Name = "tablaAssets";
@@ -204,21 +180,6 @@
             this.tablaAssets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaAssets.Size = new System.Drawing.Size(676, 318);
             this.tablaAssets.TabIndex = 27;
-            // 
-            // btnNarr
-            // 
-            this.btnNarr.Location = new System.Drawing.Point(718, 62);
-            this.btnNarr.Margin = new System.Windows.Forms.Padding(5);
-            this.btnNarr.Name = "btnNarr";
-            this.btnNarr.Size = new System.Drawing.Size(33, 27);
-            this.btnNarr.TabIndex = 26;
-            this.btnNarr.Text = "...";
-            this.btnNarr.UseVisualStyleBackColor = true;
-            this.btnNarr.Click += new System.EventHandler(this.btnNarr_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Nombre
             // 
@@ -250,6 +211,10 @@
             this.Path.ReadOnly = true;
             this.Path.Width = 800;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // GrupoAssets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -258,7 +223,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GrupoAssets";
-            this.Size = new System.Drawing.Size(845, 501);
+            this.Size = new System.Drawing.Size(845, 451);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numZOrder)).EndInit();
@@ -277,12 +242,9 @@
         private System.Windows.Forms.Button btnAddAsset;
         public System.Windows.Forms.NumericUpDown numZOrder;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNarr;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.DataGridView tablaAssets;
-        private System.Windows.Forms.Button btnNarr;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn X;

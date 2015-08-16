@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Polenter.Serialization;
+
 namespace mindnalytics
 {
     public partial class CargarAssets : Form
@@ -44,7 +46,7 @@ namespace mindnalytics
             this.splitContainer2.Panel2.Controls.Add(this.userControl11);
             //this.Controls.Add(this.userControl11);
             listaGrupos.Add(userControl11);
-            yGrupo += 510;
+            yGrupo += 490;
 
         
         }
@@ -183,6 +185,55 @@ namespace mindnalytics
                 string file = openFileDialog2.FileName;
                 txtNarrFinal.Text = file;
             }
+        }
+
+        Grupo grupoForList;
+        public List<Grupo> grupoToSave = new List<Grupo>();
+        TimeLine tiempo;
+
+        private void btnTimeLine_Click(object sender, EventArgs e)
+        {
+            grupoToSave.Clear();
+            foreach (GrupoAssets grupo in listaGrupos)
+            {
+                if (grupo.txtName.Text != "" && grupo.tablaAssets.RowCount != 0)
+                {
+
+                    List<Asset> listaAssets = new List<Asset>();
+                    Asset assetAt;
+
+                    //Console.WriteLine(grupo.txtName.Text);
+                    //Console.WriteLine(grupo.numZOrder.Value);
+                    foreach (DataGridViewRow item in grupo.tablaAssets.Rows)
+                    {
+                        assetAt = new Asset(
+                                            item.Cells["Nombre"].Value.ToString(),
+                                            int.Parse(item.Cells["X"].Value.ToString()),
+                                            int.Parse(item.Cells["Y"].Value.ToString()),
+                                            item.Cells["Path"].Value.ToString());
+                        Console.WriteLine(item.Cells["Nombre"].Value.ToString()
+                        );
+                        listaAssets.Add(assetAt);
+
+                    }
+                    //Console.WriteLine(grupo.numZOrder.Value.ToString());
+                    grupoForList = new Grupo(grupo.txtName.Text, int.Parse(grupo.numZOrder.Value.ToString()), listaAssets);
+                    grupoToSave.Add(grupoForList);
+                }
+                else
+                {
+                    MessageBox.Show("informacion faltante en el Grupo: " + grupo.nGrupo);
+                    return;
+                }
+                
+               
+                    
+                
+            }
+            tiempo = new TimeLine(grupoToSave);
+            tiempo.Show();
+            //SharpSerializer mySerializer = new SharpSerializer();
+            //mySerializer.Serialize(grupoToSave, "filetosaveto.xml");
         }
     }
 }

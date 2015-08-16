@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Polenter.SharpSerializer">
+      <HintPath>..\packages\SharpSerializer.2.20\lib\net20\Polenter.SharpSerializer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +54,7 @@
     <Compile Include="CargarAssets.Designer.cs">
       <DependentUpon>CargarAssets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grupo.cs" />
     <Compile Include="MindAnalytics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +74,12 @@
     </Compile>
     <Compile Include="GrupoAssets.Designer.cs">
       <DependentUpon>GrupoAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeLine.Designer.cs">
+      <DependentUpon>TimeLine.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CargarAssets.resx">
       <DependentUpon>CargarAssets.cs</DependentUpon>
@@ -92,6 +102,10 @@
     <EmbeddedResource Include="GrupoAssets.resx">
       <DependentUpon>GrupoAssets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TimeLine.resx">
+      <DependentUpon>TimeLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

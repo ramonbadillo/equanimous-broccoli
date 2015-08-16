@@ -46,7 +46,7 @@
             this.btnAddNewGroup = new System.Windows.Forms.Button();
             this.btnNeutral = new System.Windows.Forms.Button();
             this.btnNarrFinal = new System.Windows.Forms.Button();
-            this.btnEndConfig = new System.Windows.Forms.Button();
+            this.btnTimeLine = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNarrFinal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -98,6 +98,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer1.Panel1.Controls.Add(this.listView1);
             this.splitContainer1.Panel1.Controls.Add(this.imagen);
             this.splitContainer1.Panel1.Controls.Add(this.btnAddFile);
@@ -127,6 +128,7 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer2.Panel1.Controls.Add(this.txtNarrInicial);
             this.splitContainer2.Panel1.Controls.Add(this.btnPreview);
             this.splitContainer2.Panel1.Controls.Add(this.btnNarrInicial);
@@ -136,7 +138,7 @@
             this.splitContainer2.Panel1.Controls.Add(this.btnAddNewGroup);
             this.splitContainer2.Panel1.Controls.Add(this.btnNeutral);
             this.splitContainer2.Panel1.Controls.Add(this.btnNarrFinal);
-            this.splitContainer2.Panel1.Controls.Add(this.btnEndConfig);
+            this.splitContainer2.Panel1.Controls.Add(this.btnTimeLine);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
             this.splitContainer2.Panel1.Controls.Add(this.txtNarrFinal);
             // 
@@ -236,14 +238,15 @@
             this.btnNarrFinal.UseVisualStyleBackColor = true;
             this.btnNarrFinal.Click += new System.EventHandler(this.btnNarrFinal_Click_1);
             // 
-            // btnEndConfig
+            // btnTimeLine
             // 
-            this.btnEndConfig.Location = new System.Drawing.Point(614, 107);
-            this.btnEndConfig.Name = "btnEndConfig";
-            this.btnEndConfig.Size = new System.Drawing.Size(242, 35);
-            this.btnEndConfig.TabIndex = 25;
-            this.btnEndConfig.Text = "Finalizar Configuracion";
-            this.btnEndConfig.UseVisualStyleBackColor = true;
+            this.btnTimeLine.Location = new System.Drawing.Point(614, 107);
+            this.btnTimeLine.Name = "btnTimeLine";
+            this.btnTimeLine.Size = new System.Drawing.Size(242, 35);
+            this.btnTimeLine.TabIndex = 25;
+            this.btnTimeLine.Text = "Configurar Timeline >";
+            this.btnTimeLine.UseVisualStyleBackColor = true;
+            this.btnTimeLine.Click += new System.EventHandler(this.btnTimeLine_Click);
             // 
             // label1
             // 
@@ -306,7 +309,7 @@
         private System.Windows.Forms.Button btnAddNewGroup;
         private System.Windows.Forms.Button btnNeutral;
         private System.Windows.Forms.Button btnNarrFinal;
-        private System.Windows.Forms.Button btnEndConfig;
+        private System.Windows.Forms.Button btnTimeLine;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNarrFinal;
 

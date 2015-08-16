@@ -27,16 +27,6 @@ namespace mindnalytics
 
   
 
-        private void btnNarr_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "Sound Files (wav,ogg,m4a)|*.wav;*.ogg;*.m4a";
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                string file = openFileDialog1.FileName;
-                txtNarr.Text = file;
-            }
-        }
 
         private void btnAddAsset_Click(object sender, EventArgs e)
         {
