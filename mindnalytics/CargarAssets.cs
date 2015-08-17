@@ -20,6 +20,13 @@ namespace mindnalytics
         int nGrupo = 1;
         List<GrupoAssets> listaGrupos = new List<GrupoAssets>();
 
+        public TimeLine tiempo;
+        public CargarNarrativas narrativas;
+
+        Grupo grupoForList;
+        public List<Grupo> grupoToSave = new List<Grupo>();
+
+
         public CargarAssets()
         {
             InitializeComponent();
@@ -29,7 +36,8 @@ namespace mindnalytics
 
             createNewGroup(nGrupo);
 
-            
+            narrativas = new CargarNarrativas(this);
+            tiempo = new TimeLine(this);
         }
 
 
@@ -187,9 +195,8 @@ namespace mindnalytics
             }
         }
 
-        Grupo grupoForList;
-        public List<Grupo> grupoToSave = new List<Grupo>();
-        TimeLine tiempo;
+        
+        
 
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
@@ -225,15 +232,20 @@ namespace mindnalytics
                     MessageBox.Show("informacion faltante en el Grupo: " + grupo.nGrupo);
                     return;
                 }
-                
-               
-                    
-                
             }
-            tiempo = new TimeLine(grupoToSave);
-            tiempo.Show();
+
+            this.Hide();
+            
+            narrativas.Show();
+            //tiempo = new TimeLine(grupoToSave);
+            //tiempo.Show();
             //SharpSerializer mySerializer = new SharpSerializer();
             //mySerializer.Serialize(grupoToSave, "filetosaveto.xml");
+        }
+
+        private void CargarAssets_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,9 +28,16 @@ namespace mindnalytics
                 addImage(item.Key);
                 //pictureBox2.Image = Image.FromFile(item.Key.Path);
             }
-            
+
+
+            foreach (var imagen in listaImagenes)
+            {
+                imagen.Parent = pictureParent;
+
+            }
+            /*
             if (listaImagenes.Count > 2) {
-                /*
+                
                 System.Windows.Forms.PictureBox lastImage;
                 int i = 0;
                 foreach (var imagen in listaImagenes)
@@ -44,7 +51,7 @@ namespace mindnalytics
                     i++;
 
                 }
-                 */
+                 
                 
                 int i = 1;
                 while (i < listaImagenes.Count)
@@ -53,9 +60,9 @@ namespace mindnalytics
                     i++;
                 }
                  
-            }
-            
-            
+            }*/
+
+
 
         }
 

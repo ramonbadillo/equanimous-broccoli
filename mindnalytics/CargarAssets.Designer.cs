@@ -279,6 +279,7 @@
             this.MaximizeBox = false;
             this.Name = "CargarAssets";
             this.Text = "Cargar Assets";
+            this.Load += new System.EventHandler(this.CargarAssets_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

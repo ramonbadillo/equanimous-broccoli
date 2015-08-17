@@ -54,6 +54,13 @@
     <Compile Include="CargarAssets.Designer.cs">
       <DependentUpon>CargarAssets.cs</DependentUpon>
     </Compile>
+    <Compile Include="CargarNarrativas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargarNarrativas.Designer.cs">
+      <DependentUpon>CargarNarrativas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Experimento.cs" />
     <Compile Include="Grupo.cs" />
     <Compile Include="MindAnalytics.cs">
       <SubType>Form</SubType>
@@ -61,6 +68,7 @@
     <Compile Include="MindAnalytics.Designer.cs">
       <DependentUpon>MindAnalytics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Narrativa.cs" />
     <Compile Include="Preview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="CargarAssets.resx">
       <DependentUpon>CargarAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargarNarrativas.resx">
+      <DependentUpon>CargarNarrativas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MindAnalytics.resx">
       <DependentUpon>MindAnalytics.cs</DependentUpon>

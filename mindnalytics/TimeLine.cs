@@ -12,15 +12,23 @@ namespace mindnalytics
 {
     public partial class TimeLine : Form
     {
-        public TimeLine(List<Grupo> grupoToSave)
+
+        
+
+        public CargarAssets assets;
+        string selectedList = "None";
+
+        public TimeLine(CargarAssets assets)
         {
             InitializeComponent();
-
+            this.assets = assets;
+            /*
             foreach (Grupo grupo in grupoToSave)
             {
                 ListViewItem itm = new ListViewItem(grupo.nombre);
                 listView1.Items.Add(itm);
             }
+             */ 
         }
 
         private void TimeLine_Load(object sender, EventArgs e)
@@ -28,9 +36,71 @@ namespace mindnalytics
 
         }
 
-        private void btnAddAsset_Click(object sender, EventArgs e)
+        private void btnAddAsset_Click(object sender, EventArgs e)  
         {
-             
+            if (selectedList == "Assets"){
+                
+                string name = "";
+                foreach (ListViewItem item in listView1.SelectedItems)
+                {
+                    name = item.Text;
+
+
+                    string[] row = new string[] { tablaTimeline.RowCount+1+"", name, "GA" };
+                    tablaTimeline.Rows.Add(row);
+                }
+                
+            }
+            if(selectedList=="Narrativas"){
+                string name = "";
+                foreach (ListViewItem item in listView2.SelectedItems)
+                {
+                    name = item.Text;
+
+
+                    string[] row = new string[] { tablaTimeline.RowCount + 1 + "", name, "N" };
+                    tablaTimeline.Rows.Add(row);
+                }
+            }else{
+                MessageBox.Show("Selecciona una lista primero");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.assets.narrativas.Show();
+        }
+
+        public void refreshLists()
+        {
+
+            listView2.Clear();
+            listView1.Clear();
+            foreach (Narrativa narrTL in this.assets.narrativas.listaNarrativas)
+            {
+                ListViewItem itm = new ListViewItem(narrTL.nombre);
+                listView2.Items.Add(itm);
+            }
+
+            foreach (Grupo grupo in this.assets.grupoToSave)
+            {
+                ListViewItem itm = new ListViewItem(grupo.nombre);
+                listView1.Items.Add(itm);
+            }
+
+
+            MessageBox.Show("Listar regrescadas");
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedList = "Assets";
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedList = "Narrativas";
         }
     }
 }

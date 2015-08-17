@@ -20,6 +20,7 @@ namespace mindnalytics
         private void button1_Click(object sender, EventArgs e)
         {
             CargarAssets cargar = new CargarAssets();
+            this.Hide();
             cargar.ShowDialog();
         }
     }

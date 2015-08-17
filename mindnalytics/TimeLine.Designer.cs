@@ -31,21 +31,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tablaAssets = new System.Windows.Forms.DataGridView();
+            this.tablaTimeline = new System.Windows.Forms.DataGridView();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDwnAsset = new System.Windows.Forms.Button();
             this.btnUpAsset = new System.Windows.Forms.Button();
             this.btnRmvAsset = new System.Windows.Forms.Button();
             this.btnAddAsset = new System.Windows.Forms.Button();
             this.btnTimeLine = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Archivo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.tablaAssets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaTimeline)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,82 +75,23 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Sequencia";
             // 
-            // tablaAssets
+            // tablaTimeline
             // 
-            this.tablaAssets.AllowUserToAddRows = false;
-            this.tablaAssets.AllowUserToDeleteRows = false;
-            this.tablaAssets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaAssets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tablaTimeline.AllowUserToAddRows = false;
+            this.tablaTimeline.AllowUserToDeleteRows = false;
+            this.tablaTimeline.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaTimeline.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Numero,
             this.Nombre,
             this.Tipo});
-            this.tablaAssets.Location = new System.Drawing.Point(345, 84);
-            this.tablaAssets.Margin = new System.Windows.Forms.Padding(5);
-            this.tablaAssets.MultiSelect = false;
-            this.tablaAssets.Name = "tablaAssets";
-            this.tablaAssets.RowHeadersVisible = false;
-            this.tablaAssets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaAssets.Size = new System.Drawing.Size(424, 530);
-            this.tablaAssets.TabIndex = 28;
-            // 
-            // btnDwnAsset
-            // 
-            this.btnDwnAsset.Location = new System.Drawing.Point(778, 377);
-            this.btnDwnAsset.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDwnAsset.Name = "btnDwnAsset";
-            this.btnDwnAsset.Size = new System.Drawing.Size(53, 47);
-            this.btnDwnAsset.TabIndex = 41;
-            this.btnDwnAsset.Text = "Dwn";
-            this.btnDwnAsset.UseVisualStyleBackColor = true;
-            // 
-            // btnUpAsset
-            // 
-            this.btnUpAsset.Location = new System.Drawing.Point(778, 322);
-            this.btnUpAsset.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUpAsset.Name = "btnUpAsset";
-            this.btnUpAsset.Size = new System.Drawing.Size(53, 47);
-            this.btnUpAsset.TabIndex = 40;
-            this.btnUpAsset.Text = "Up";
-            this.btnUpAsset.UseVisualStyleBackColor = true;
-            // 
-            // btnRmvAsset
-            // 
-            this.btnRmvAsset.Location = new System.Drawing.Point(270, 377);
-            this.btnRmvAsset.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRmvAsset.Name = "btnRmvAsset";
-            this.btnRmvAsset.Size = new System.Drawing.Size(53, 47);
-            this.btnRmvAsset.TabIndex = 39;
-            this.btnRmvAsset.Text = "-";
-            this.btnRmvAsset.UseVisualStyleBackColor = true;
-            // 
-            // btnAddAsset
-            // 
-            this.btnAddAsset.Location = new System.Drawing.Point(270, 322);
-            this.btnAddAsset.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddAsset.Name = "btnAddAsset";
-            this.btnAddAsset.Size = new System.Drawing.Size(53, 47);
-            this.btnAddAsset.TabIndex = 38;
-            this.btnAddAsset.Text = "+";
-            this.btnAddAsset.UseVisualStyleBackColor = true;
-            this.btnAddAsset.Click += new System.EventHandler(this.btnAddAsset_Click);
-            // 
-            // btnTimeLine
-            // 
-            this.btnTimeLine.Location = new System.Drawing.Point(590, 12);
-            this.btnTimeLine.Name = "btnTimeLine";
-            this.btnTimeLine.Size = new System.Drawing.Size(242, 35);
-            this.btnTimeLine.TabIndex = 42;
-            this.btnTimeLine.Text = "Finalizar Configuracion >";
-            this.btnTimeLine.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 35);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "< Regresar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tablaTimeline.Location = new System.Drawing.Point(325, 84);
+            this.tablaTimeline.Margin = new System.Windows.Forms.Padding(5);
+            this.tablaTimeline.MultiSelect = false;
+            this.tablaTimeline.Name = "tablaTimeline";
+            this.tablaTimeline.RowHeadersVisible = false;
+            this.tablaTimeline.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaTimeline.Size = new System.Drawing.Size(424, 530);
+            this.tablaTimeline.TabIndex = 28;
             // 
             // Numero
             // 
@@ -172,6 +113,66 @@
             this.Tipo.Name = "Tipo";
             this.Tipo.ReadOnly = true;
             // 
+            // btnDwnAsset
+            // 
+            this.btnDwnAsset.Location = new System.Drawing.Point(758, 377);
+            this.btnDwnAsset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDwnAsset.Name = "btnDwnAsset";
+            this.btnDwnAsset.Size = new System.Drawing.Size(53, 47);
+            this.btnDwnAsset.TabIndex = 41;
+            this.btnDwnAsset.Text = "Dwn";
+            this.btnDwnAsset.UseVisualStyleBackColor = true;
+            // 
+            // btnUpAsset
+            // 
+            this.btnUpAsset.Location = new System.Drawing.Point(758, 322);
+            this.btnUpAsset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpAsset.Name = "btnUpAsset";
+            this.btnUpAsset.Size = new System.Drawing.Size(53, 47);
+            this.btnUpAsset.TabIndex = 40;
+            this.btnUpAsset.Text = "Up";
+            this.btnUpAsset.UseVisualStyleBackColor = true;
+            // 
+            // btnRmvAsset
+            // 
+            this.btnRmvAsset.Location = new System.Drawing.Point(263, 377);
+            this.btnRmvAsset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRmvAsset.Name = "btnRmvAsset";
+            this.btnRmvAsset.Size = new System.Drawing.Size(53, 47);
+            this.btnRmvAsset.TabIndex = 39;
+            this.btnRmvAsset.Text = "-";
+            this.btnRmvAsset.UseVisualStyleBackColor = true;
+            // 
+            // btnAddAsset
+            // 
+            this.btnAddAsset.Location = new System.Drawing.Point(263, 322);
+            this.btnAddAsset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddAsset.Name = "btnAddAsset";
+            this.btnAddAsset.Size = new System.Drawing.Size(53, 47);
+            this.btnAddAsset.TabIndex = 38;
+            this.btnAddAsset.Text = "+";
+            this.btnAddAsset.UseVisualStyleBackColor = true;
+            this.btnAddAsset.Click += new System.EventHandler(this.btnAddAsset_Click);
+            // 
+            // btnTimeLine
+            // 
+            this.btnTimeLine.Location = new System.Drawing.Point(570, 12);
+            this.btnTimeLine.Name = "btnTimeLine";
+            this.btnTimeLine.Size = new System.Drawing.Size(242, 35);
+            this.btnTimeLine.TabIndex = 42;
+            this.btnTimeLine.Text = "Finalizar Configuracion >";
+            this.btnTimeLine.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(242, 35);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "< Regresar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -184,6 +185,7 @@
             this.listView1.TabIndex = 44;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Archivo
             // 
@@ -202,6 +204,7 @@
             this.listView2.TabIndex = 45;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -212,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 630);
+            this.ClientSize = new System.Drawing.Size(824, 630);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
@@ -221,7 +224,7 @@
             this.Controls.Add(this.btnUpAsset);
             this.Controls.Add(this.btnRmvAsset);
             this.Controls.Add(this.btnAddAsset);
-            this.Controls.Add(this.tablaAssets);
+            this.Controls.Add(this.tablaTimeline);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -230,7 +233,7 @@
             this.Name = "TimeLine";
             this.Text = "TimeLine";
             this.Load += new System.EventHandler(this.TimeLine_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaAssets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaTimeline)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +244,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.DataGridView tablaAssets;
+        public System.Windows.Forms.DataGridView tablaTimeline;
         private System.Windows.Forms.Button btnDwnAsset;
         private System.Windows.Forms.Button btnUpAsset;
         private System.Windows.Forms.Button btnRmvAsset;
