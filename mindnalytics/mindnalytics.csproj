@@ -62,6 +62,13 @@
     </Compile>
     <Compile Include="Experimento.cs" />
     <Compile Include="Grupo.cs" />
+    <Compile Include="Guardar.cs" />
+    <Compile Include="ImagenNeutral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImagenNeutral.Designer.cs">
+      <DependentUpon>ImagenNeutral.cs</DependentUpon>
+    </Compile>
     <Compile Include="MindAnalytics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +76,13 @@
       <DependentUpon>MindAnalytics.cs</DependentUpon>
     </Compile>
     <Compile Include="Narrativa.cs" />
+    <Compile Include="Neutral.cs" />
+    <Compile Include="ObjetoAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjetoAnalisis.Designer.cs">
+      <DependentUpon>ObjetoAnalisis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Preview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +97,8 @@
     <Compile Include="GrupoAssets.Designer.cs">
       <DependentUpon>GrupoAssets.cs</DependentUpon>
     </Compile>
+    <Compile Include="QR.cs" />
+    <Compile Include="Registro.cs" />
     <Compile Include="TimeLine.cs">
       <SubType>Form</SubType>
     </Compile>
