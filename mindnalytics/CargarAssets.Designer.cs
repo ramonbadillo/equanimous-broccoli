@@ -144,7 +144,7 @@
             // 
             this.btnCargarAssets.Location = new System.Drawing.Point(262, 49);
             this.btnCargarAssets.Name = "btnCargarAssets";
-            this.btnCargarAssets.Size = new System.Drawing.Size(192, 35);
+            this.btnCargarAssets.Size = new System.Drawing.Size(222, 35);
             this.btnCargarAssets.TabIndex = 30;
             this.btnCargarAssets.Text = "Cargar Grupo de Assets";
             this.btnCargarAssets.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(528, 49);
+            this.btnPreview.Location = new System.Drawing.Point(500, 49);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(164, 35);
             this.btnPreview.TabIndex = 29;
@@ -180,9 +180,9 @@
             // 
             // btnAddNewGroup
             // 
-            this.btnAddNewGroup.Location = new System.Drawing.Point(27, 49);
+            this.btnAddNewGroup.Location = new System.Drawing.Point(23, 49);
             this.btnAddNewGroup.Name = "btnAddNewGroup";
-            this.btnAddNewGroup.Size = new System.Drawing.Size(212, 35);
+            this.btnAddNewGroup.Size = new System.Drawing.Size(229, 35);
             this.btnAddNewGroup.TabIndex = 21;
             this.btnAddNewGroup.Text = "Añadir Nuevo Grupo de Assets";
             this.btnAddNewGroup.UseVisualStyleBackColor = true;
