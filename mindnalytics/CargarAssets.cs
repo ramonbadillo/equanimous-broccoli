@@ -84,28 +84,7 @@ namespace mindnalytics
 
 
 
-        private void btnNarrInicial_Click(object sender, EventArgs e)
-        {
-            openFileDialog2.Filter = "Sound Files (wav,ogg,m4a)|*.wav;*.ogg;*.m4a";
-            DialogResult result = openFileDialog2.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                string file = openFileDialog2.FileName;
-                txtNarrInicial.Text = file;
-            }
-        }
-
-        private void btnNarrFinal_Click(object sender, EventArgs e)
-        {
-            openFileDialog2.Filter = "Sound Files (wav,ogg,m4a)|*.wav;*.ogg;*.m4a";
-            DialogResult result = openFileDialog2.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                string file = openFileDialog2.FileName;
-                txtNarrFinal.Text = file;
-            }
-        }
-
+       
         private void btnNeutral_Click(object sender, EventArgs e)
         {
             openFileDialog2.Filter = "Image Files (jpg,jpeg,png)|*.jpg;*.jpeg;*.png";
@@ -113,7 +92,7 @@ namespace mindnalytics
             if (result == DialogResult.OK) // Test result.
             {
                 string file = openFileDialog2.FileName;
-                txtNarrFinal.Text = file;
+                txtNeutral.Text = file;
             }
         }
         
@@ -162,27 +141,7 @@ namespace mindnalytics
 
         }
 
-        private void btnNarrInicial_Click_1(object sender, EventArgs e)
-        {
-            openFileDialog2.Filter = "Sound Files (wav,ogg,m4a)|*.wav;*.ogg;*.m4a";
-            DialogResult result = openFileDialog2.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                string file = openFileDialog2.FileName;
-                txtNarrInicial.Text = file;
-            }
-        }
-
-        private void btnNarrFinal_Click_1(object sender, EventArgs e)
-        {
-            openFileDialog2.Filter = "Sound Files (wav,ogg,m4a)|*.wav;*.ogg;*.m4a";
-            DialogResult result = openFileDialog2.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                string file = openFileDialog2.FileName;
-                txtNarrFinal.Text = file;
-            }
-        }
+        
 
         private void btnNeutral_Click_1(object sender, EventArgs e)
         {
@@ -191,7 +150,7 @@ namespace mindnalytics
             if (result == DialogResult.OK) // Test result.
             {
                 string file = openFileDialog2.FileName;
-                txtNarrFinal.Text = file;
+                txtNeutral.Text = file;
             }
         }
 
@@ -224,8 +183,13 @@ namespace mindnalytics
 
                     }
                     //Console.WriteLine(grupo.numZOrder.Value.ToString());
+                    
+
                     grupoForList = new Grupo(grupo.txtName.Text, int.Parse(grupo.numZOrder.Value.ToString()), listaAssets);
+                    SharpSerializer mySerializer = new SharpSerializer();
+                    mySerializer.Serialize(grupoForList, grupo.txtName.Text+ ".xml");
                     grupoToSave.Add(grupoForList);
+
                 }
                 else
                 {
@@ -239,13 +203,41 @@ namespace mindnalytics
             narrativas.Show();
             //tiempo = new TimeLine(grupoToSave);
             //tiempo.Show();
-            //SharpSerializer mySerializer = new SharpSerializer();
-            //mySerializer.Serialize(grupoToSave, "filetosaveto.xml");
+            
         }
 
         private void CargarAssets_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void btnCargarAssets_Click(object sender, EventArgs e)
+        {
+            openFileDialog3.Filter = "XML Files (xml)|*.xml";
+            DialogResult result = openFileDialog3.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog3.FileName;
+                
+                // deserialize
+                try
+                {
+                    var serializer = new SharpSerializer();
+                    Console.WriteLine(file);
+                    Grupo grupoGuardado = (Grupo)serializer.Deserialize(file);
+                    Console.WriteLine(grupoGuardado.nombre);
+
+                    
+                }
+                catch (Exception es)
+                {
+                    Console.WriteLine("No Jala");
+                    Console.WriteLine(es);
+                }
+                
+            }
+        }
+        //
+        //registrarlo como aviso comercial
     }
 }

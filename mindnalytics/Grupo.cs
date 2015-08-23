@@ -22,6 +22,10 @@ namespace mindnalytics
 
         }
 
+        public Grupo() { 
+        
+        }
+
         public string Nombre
         {
             get { return nombre; }

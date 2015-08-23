@@ -127,6 +127,28 @@ namespace mindnalytics
 
         }
 
+        private void tablaAssets_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+
+                openFileDialog2.Filter = "Image Files (jpg,jpeg,png)|*.jpg;*.jpeg;*.png";
+                DialogResult result = openFileDialog2.ShowDialog(); // Show the dialog.
+                if (result == DialogResult.OK) // Test result.
+                {
+                    string file = openFileDialog2.FileName;
+                    tablaAssets.Rows[e.RowIndex].Cells[1].Value = file;
+                    //txtNarrFinal.Text = file;
+                }
+
+                MessageBox.Show((e.RowIndex + 1) + "  Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
+            }
+        
+        }
+
+
+        
+
         
     }
 }

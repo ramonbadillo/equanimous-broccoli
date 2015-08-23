@@ -20,6 +20,9 @@ namespace mindnalytics
             this.path = path;
         }
 
+        public Asset() { 
+        
+        }
 
         public string Nombre
         {

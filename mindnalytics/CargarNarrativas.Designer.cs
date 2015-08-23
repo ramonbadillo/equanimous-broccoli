@@ -34,13 +34,14 @@
             this.btnRmvAsset = new System.Windows.Forms.Button();
             this.btnAddAsset = new System.Windows.Forms.Button();
             this.tablaAssets = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnTimeLine = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnTimeLine = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.tablaAssets)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,30 +114,7 @@
             this.tablaAssets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaAssets.Size = new System.Drawing.Size(715, 364);
             this.tablaAssets.TabIndex = 36;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(307, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 35);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "< Regresar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnTimeLine
-            // 
-            this.btnTimeLine.Location = new System.Drawing.Point(766, 12);
-            this.btnTimeLine.Name = "btnTimeLine";
-            this.btnTimeLine.Size = new System.Drawing.Size(242, 35);
-            this.btnTimeLine.TabIndex = 45;
-            this.btnTimeLine.Text = "Configurar Timeline >";
-            this.btnTimeLine.UseVisualStyleBackColor = true;
-            this.btnTimeLine.Click += new System.EventHandler(this.btnTimeLine_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.tablaAssets.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaAssets_CellClick);
             // 
             // Nombre
             // 
@@ -163,6 +141,34 @@
             this.Path.ReadOnly = true;
             this.Path.Width = 800;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(307, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(242, 35);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "< Regresar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnTimeLine
+            // 
+            this.btnTimeLine.Location = new System.Drawing.Point(766, 12);
+            this.btnTimeLine.Name = "btnTimeLine";
+            this.btnTimeLine.Size = new System.Drawing.Size(242, 35);
+            this.btnTimeLine.TabIndex = 45;
+            this.btnTimeLine.Text = "Configurar Timeline >";
+            this.btnTimeLine.UseVisualStyleBackColor = true;
+            this.btnTimeLine.Click += new System.EventHandler(this.btnTimeLine_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
             // CargarNarrativas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,7 +182,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnAddFile);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CargarNarrativas";
             this.Text = "CargarNarrativas";
             ((System.ComponentModel.ISupportInitialize)(this.tablaAssets)).EndInit();
@@ -199,6 +205,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
         private System.Windows.Forms.DataGridViewButtonColumn boton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Path;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
 
     }
 }

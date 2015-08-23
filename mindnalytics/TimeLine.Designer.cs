@@ -45,6 +45,7 @@
             this.Archivo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.tablaTimeline)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,6 +163,7 @@
             this.btnTimeLine.TabIndex = 42;
             this.btnTimeLine.Text = "Finalizar Configuracion >";
             this.btnTimeLine.UseVisualStyleBackColor = true;
+            this.btnTimeLine.Click += new System.EventHandler(this.btnTimeLine_Click);
             // 
             // button1
             // 
@@ -258,5 +260,6 @@
         private System.Windows.Forms.ColumnHeader Archivo;
         public System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

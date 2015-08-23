@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Polenter.Serialization;
+
 namespace mindnalytics
 {
     public partial class TimeLine : Form
@@ -75,8 +77,8 @@ namespace mindnalytics
         public void refreshLists()
         {
 
-            listView2.Clear();
-            listView1.Clear();
+            listView2.Items.Clear();
+            listView1.Items.Clear();
             foreach (Narrativa narrTL in this.assets.narrativas.listaNarrativas)
             {
                 ListViewItem itm = new ListViewItem(narrTL.nombre);
@@ -89,7 +91,7 @@ namespace mindnalytics
                 listView1.Items.Add(itm);
             }
 
-
+            
             MessageBox.Show("Listar regrescadas");
         }
 
@@ -101,6 +103,11 @@ namespace mindnalytics
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedList = "Narrativas";
+        }
+
+        private void btnTimeLine_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

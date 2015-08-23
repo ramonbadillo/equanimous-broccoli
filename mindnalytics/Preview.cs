@@ -30,11 +30,7 @@ namespace mindnalytics
             }
 
 
-            foreach (var imagen in listaImagenes)
-            {
-                imagen.Parent = pictureParent;
-
-            }
+            
             /*
             if (listaImagenes.Count > 2) {
                 
@@ -87,7 +83,11 @@ namespace mindnalytics
         private void Preview_Load(object sender, EventArgs e)
         {
 
-            
+            foreach (var imagen in listaImagenes)
+            {
+                imagen.Parent = pictureParent;
+
+            }
 
             
         }  

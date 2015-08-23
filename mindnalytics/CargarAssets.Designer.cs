@@ -37,18 +37,14 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.txtNarrInicial = new System.Windows.Forms.TextBox();
+            this.btnCargarAssets = new System.Windows.Forms.Button();
             this.btnPreview = new System.Windows.Forms.Button();
-            this.btnNarrInicial = new System.Windows.Forms.Button();
             this.txtNeutral = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAddNewGroup = new System.Windows.Forms.Button();
             this.btnNeutral = new System.Windows.Forms.Button();
-            this.btnNarrFinal = new System.Windows.Forms.Button();
             this.btnTimeLine = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNarrFinal = new System.Windows.Forms.TextBox();
+            this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -67,7 +63,7 @@
             this.listView1.Location = new System.Drawing.Point(13, 49);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(207, 530);
+            this.listView1.Size = new System.Drawing.Size(207, 370);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -106,13 +102,13 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1139, 741);
+            this.splitContainer1.Size = new System.Drawing.Size(1154, 638);
             this.splitContainer1.SplitterDistance = 239;
             this.splitContainer1.TabIndex = 18;
             // 
             // imagen
             // 
-            this.imagen.Location = new System.Drawing.Point(13, 586);
+            this.imagen.Location = new System.Drawing.Point(13, 426);
             this.imagen.Name = "imagen";
             this.imagen.Size = new System.Drawing.Size(207, 200);
             this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,77 +125,53 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer2.Panel1.Controls.Add(this.txtNarrInicial);
+            this.splitContainer2.Panel1.Controls.Add(this.btnCargarAssets);
             this.splitContainer2.Panel1.Controls.Add(this.btnPreview);
-            this.splitContainer2.Panel1.Controls.Add(this.btnNarrInicial);
             this.splitContainer2.Panel1.Controls.Add(this.txtNeutral);
-            this.splitContainer2.Panel1.Controls.Add(this.label2);
             this.splitContainer2.Panel1.Controls.Add(this.label3);
             this.splitContainer2.Panel1.Controls.Add(this.btnAddNewGroup);
             this.splitContainer2.Panel1.Controls.Add(this.btnNeutral);
-            this.splitContainer2.Panel1.Controls.Add(this.btnNarrFinal);
             this.splitContainer2.Panel1.Controls.Add(this.btnTimeLine);
-            this.splitContainer2.Panel1.Controls.Add(this.label1);
-            this.splitContainer2.Panel1.Controls.Add(this.txtNarrFinal);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
-            this.splitContainer2.Size = new System.Drawing.Size(896, 741);
-            this.splitContainer2.SplitterDistance = 145;
+            this.splitContainer2.Size = new System.Drawing.Size(911, 638);
+            this.splitContainer2.SplitterDistance = 86;
             this.splitContainer2.TabIndex = 18;
             // 
-            // txtNarrInicial
+            // btnCargarAssets
             // 
-            this.txtNarrInicial.Location = new System.Drawing.Point(137, 10);
-            this.txtNarrInicial.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNarrInicial.Name = "txtNarrInicial";
-            this.txtNarrInicial.Size = new System.Drawing.Size(691, 22);
-            this.txtNarrInicial.TabIndex = 20;
+            this.btnCargarAssets.Location = new System.Drawing.Point(262, 49);
+            this.btnCargarAssets.Name = "btnCargarAssets";
+            this.btnCargarAssets.Size = new System.Drawing.Size(192, 35);
+            this.btnCargarAssets.TabIndex = 30;
+            this.btnCargarAssets.Text = "Cargar Grupo de Assets";
+            this.btnCargarAssets.UseVisualStyleBackColor = true;
+            this.btnCargarAssets.Click += new System.EventHandler(this.btnCargarAssets_Click);
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(312, 107);
+            this.btnPreview.Location = new System.Drawing.Point(528, 49);
             this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(242, 35);
+            this.btnPreview.Size = new System.Drawing.Size(164, 35);
             this.btnPreview.TabIndex = 29;
-            this.btnPreview.Text = "Crear Preview";
+            this.btnPreview.Text = "Ver Preview";
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
-            // btnNarrInicial
-            // 
-            this.btnNarrInicial.Location = new System.Drawing.Point(836, 10);
-            this.btnNarrInicial.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNarrInicial.Name = "btnNarrInicial";
-            this.btnNarrInicial.Size = new System.Drawing.Size(25, 22);
-            this.btnNarrInicial.TabIndex = 18;
-            this.btnNarrInicial.Text = "...";
-            this.btnNarrInicial.UseVisualStyleBackColor = true;
-            this.btnNarrInicial.Click += new System.EventHandler(this.btnNarrInicial_Click_1);
-            // 
             // txtNeutral
             // 
-            this.txtNeutral.Location = new System.Drawing.Point(137, 70);
+            this.txtNeutral.Location = new System.Drawing.Point(138, 16);
             this.txtNeutral.Margin = new System.Windows.Forms.Padding(4);
             this.txtNeutral.Name = "txtNeutral";
             this.txtNeutral.Size = new System.Drawing.Size(691, 22);
             this.txtNeutral.TabIndex = 28;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 16);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Narrativa Inicial :";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 73);
+            this.label3.Location = new System.Drawing.Point(20, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 16);
@@ -208,9 +180,9 @@
             // 
             // btnAddNewGroup
             // 
-            this.btnAddNewGroup.Location = new System.Drawing.Point(28, 107);
+            this.btnAddNewGroup.Location = new System.Drawing.Point(27, 49);
             this.btnAddNewGroup.Name = "btnAddNewGroup";
-            this.btnAddNewGroup.Size = new System.Drawing.Size(242, 35);
+            this.btnAddNewGroup.Size = new System.Drawing.Size(212, 35);
             this.btnAddNewGroup.TabIndex = 21;
             this.btnAddNewGroup.Text = "Añadir Nuevo Grupo de Assets";
             this.btnAddNewGroup.UseVisualStyleBackColor = true;
@@ -218,7 +190,7 @@
             // 
             // btnNeutral
             // 
-            this.btnNeutral.Location = new System.Drawing.Point(836, 70);
+            this.btnNeutral.Location = new System.Drawing.Point(837, 16);
             this.btnNeutral.Margin = new System.Windows.Forms.Padding(4);
             this.btnNeutral.Name = "btnNeutral";
             this.btnNeutral.Size = new System.Drawing.Size(25, 22);
@@ -227,51 +199,26 @@
             this.btnNeutral.UseVisualStyleBackColor = true;
             this.btnNeutral.Click += new System.EventHandler(this.btnNeutral_Click_1);
             // 
-            // btnNarrFinal
-            // 
-            this.btnNarrFinal.Location = new System.Drawing.Point(836, 40);
-            this.btnNarrFinal.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNarrFinal.Name = "btnNarrFinal";
-            this.btnNarrFinal.Size = new System.Drawing.Size(25, 22);
-            this.btnNarrFinal.TabIndex = 22;
-            this.btnNarrFinal.Text = "...";
-            this.btnNarrFinal.UseVisualStyleBackColor = true;
-            this.btnNarrFinal.Click += new System.EventHandler(this.btnNarrFinal_Click_1);
-            // 
             // btnTimeLine
             // 
-            this.btnTimeLine.Location = new System.Drawing.Point(614, 107);
+            this.btnTimeLine.Location = new System.Drawing.Point(698, 49);
             this.btnTimeLine.Name = "btnTimeLine";
-            this.btnTimeLine.Size = new System.Drawing.Size(242, 35);
+            this.btnTimeLine.Size = new System.Drawing.Size(201, 35);
             this.btnTimeLine.TabIndex = 25;
-            this.btnTimeLine.Text = "Configurar Timeline >";
+            this.btnTimeLine.Text = "Configurar Narrativas >";
             this.btnTimeLine.UseVisualStyleBackColor = true;
             this.btnTimeLine.Click += new System.EventHandler(this.btnTimeLine_Click);
             // 
-            // label1
+            // openFileDialog3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Narrativa Final :";
-            // 
-            // txtNarrFinal
-            // 
-            this.txtNarrFinal.Location = new System.Drawing.Point(137, 40);
-            this.txtNarrFinal.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNarrFinal.Name = "txtNarrFinal";
-            this.txtNarrFinal.Size = new System.Drawing.Size(691, 22);
-            this.txtNarrFinal.TabIndex = 24;
+            this.openFileDialog3.FileName = "openFileDialog3";
             // 
             // CargarAssets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1139, 741);
+            this.ClientSize = new System.Drawing.Size(1154, 638);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -301,18 +248,14 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TextBox txtNarrInicial;
         private System.Windows.Forms.Button btnPreview;
-        private System.Windows.Forms.Button btnNarrInicial;
         private System.Windows.Forms.TextBox txtNeutral;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAddNewGroup;
         private System.Windows.Forms.Button btnNeutral;
-        private System.Windows.Forms.Button btnNarrFinal;
         private System.Windows.Forms.Button btnTimeLine;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNarrFinal;
+        private System.Windows.Forms.Button btnCargarAssets;
+        private System.Windows.Forms.OpenFileDialog openFileDialog3;
 
         //GrupoAssets grupo = new GrupoAssets();
         #endregion
