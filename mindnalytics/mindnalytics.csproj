@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetEmotivSDK">
+      <HintPath>..\..\EjemploReader\FinalEEGReader\FinalEEGReader\bin\Debug\DotNetEmotivSDK.dll</HintPath>
+    </Reference>
     <Reference Include="Polenter.SharpSerializer">
       <HintPath>..\packages\SharpSerializer.2.20\lib\net20\Polenter.SharpSerializer.dll</HintPath>
     </Reference>
@@ -98,6 +101,7 @@
       <DependentUpon>GrupoAssets.cs</DependentUpon>
     </Compile>
     <Compile Include="QR.cs" />
+    <Compile Include="ReaderEmotiv.cs" />
     <Compile Include="Registro.cs" />
     <Compile Include="TimeLine.cs">
       <SubType>Form</SubType>
@@ -110,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CargarNarrativas.resx">
       <DependentUpon>CargarNarrativas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImagenNeutral.resx">
+      <DependentUpon>ImagenNeutral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MindAnalytics.resx">
       <DependentUpon>MindAnalytics.cs</DependentUpon>

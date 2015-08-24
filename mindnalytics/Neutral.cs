@@ -8,5 +8,6 @@ namespace mindnalytics
 {
     class Neutral
     {
+
     }
 }

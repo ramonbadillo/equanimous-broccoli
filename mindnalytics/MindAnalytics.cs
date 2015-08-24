@@ -23,5 +23,12 @@ namespace mindnalytics
             this.Hide();
             cargar.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ImagenNeutral neutral = new ImagenNeutral();
+            this.Hide();
+            neutral.Show();
+        }
     }
 }
