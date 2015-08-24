@@ -45,6 +45,7 @@
             this.btnNeutral = new System.Windows.Forms.Button();
             this.btnTimeLine = new System.Windows.Forms.Button();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -213,6 +214,10 @@
             // 
             this.openFileDialog3.FileName = "openFileDialog3";
             // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.Description = "Selecciona la ubicacion del proyecto";
+            // 
             // CargarAssets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,6 +261,7 @@
         private System.Windows.Forms.Button btnTimeLine;
         private System.Windows.Forms.Button btnCargarAssets;
         private System.Windows.Forms.OpenFileDialog openFileDialog3;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
 
         //GrupoAssets grupo = new GrupoAssets();
         #endregion

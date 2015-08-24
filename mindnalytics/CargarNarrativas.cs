@@ -100,6 +100,9 @@ namespace mindnalytics
                     listaNarrativas.Add(narr);
 
                 }
+
+
+
                 this.Hide();
                 assets.tiempo.Show();
                 assets.tiempo.refreshLists();

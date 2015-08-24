@@ -32,13 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-
     <Reference Include="DotNetEmotivSDK">
       <HintPath>..\..\EjemploReader\FinalEEGReader\FinalEEGReader\bin\Debug\DotNetEmotivSDK.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Numerics">
       <HintPath>..\packages\MathNet.Numerics.3.7.0\lib\net40\MathNet.Numerics.dll</HintPath>
-
     </Reference>
     <Reference Include="Polenter.SharpSerializer">
       <HintPath>..\packages\SharpSerializer.2.20\lib\net20\Polenter.SharpSerializer.dll</HintPath>
@@ -86,12 +84,7 @@
     </Compile>
     <Compile Include="Narrativa.cs" />
     <Compile Include="Neutral.cs" />
-    <Compile Include="ObjetoAnalisis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ObjetoAnalisis.Designer.cs">
-      <DependentUpon>ObjetoAnalisis.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ObjetoAnalisis.cs" />
     <Compile Include="Preview.cs">
       <SubType>Form</SubType>
     </Compile>

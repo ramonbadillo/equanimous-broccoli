@@ -8,6 +8,11 @@ namespace mindnalytics
 {
     static class QR
     {
+        
+        static Boolean emotionNeutral = false;
+        static int countNeutral = 0;
+        static Single neutralScore = 0;
+        
         public static int exitementScore(List<double> valores, int numSamples)
         {
             int exitementScore = 0;
@@ -21,5 +26,20 @@ namespace mindnalytics
 
             return exitementScore;
         }
+
+        public static Boolean neutral(Single exitementScore) {
+            neutralScore = exitementScore;
+            if (neutralScore > 0.4 && neutralScore < 0.6)
+                countNeutral++;
+            else
+                countNeutral = 0;
+
+            
+            emotionNeutral = countNeutral > 20 ? true : false;
+            
+            return emotionNeutral;
+        }
+
+        
     }
 }

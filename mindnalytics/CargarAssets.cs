@@ -54,7 +54,8 @@ namespace mindnalytics
             this.splitContainer2.Panel2.Controls.Add(this.userControl11);
             //this.Controls.Add(this.userControl11);
             listaGrupos.Add(userControl11);
-            yGrupo += 490;
+            yGrupo += 500;
+            Console.WriteLine(""+yGrupo);
 
         
         }
@@ -154,12 +155,22 @@ namespace mindnalytics
             }
         }
 
-        
-        
+
+        public string folderName = "";
 
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
             grupoToSave.Clear();
+            if (folderName == "")
+            {
+                DialogResult result = folderBrowserDialog1.ShowDialog();
+                if (result == DialogResult.OK)
+                    folderName = folderBrowserDialog1.SelectedPath;
+                else
+                    return;
+                //Console.WriteLine(folderName);
+            }
+
             foreach (GrupoAssets grupo in listaGrupos)
             {
                 if (grupo.txtName.Text != "" && grupo.tablaAssets.RowCount != 0)
@@ -187,13 +198,14 @@ namespace mindnalytics
 
                     grupoForList = new Grupo(grupo.txtName.Text, int.Parse(grupo.numZOrder.Value.ToString()), listaAssets);
                     SharpSerializer mySerializer = new SharpSerializer();
-                    mySerializer.Serialize(grupoForList, grupo.txtName.Text+ ".xml");
+                    
+                    mySerializer.Serialize(grupoForList, folderName + "\\" + grupo.txtName.Text+ ".xml");
                     grupoToSave.Add(grupoForList);
 
                 }
                 else
                 {
-                    MessageBox.Show("informacion faltante en el Grupo: " + grupo.nGrupo);
+                    MessageBox.Show("Informacion faltante en el Grupo: " + grupo.nGrupo+1);
                     return;
                 }
             }
