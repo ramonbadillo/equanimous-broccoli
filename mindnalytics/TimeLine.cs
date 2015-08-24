@@ -20,6 +20,8 @@ namespace mindnalytics
         public CargarAssets assets;
         string selectedList = "None";
 
+        public List<ItemsEstudio> listaItemsEstudio = new List<ItemsEstudio>();
+
         public TimeLine(CargarAssets assets)
         {
             InitializeComponent();
@@ -105,9 +107,39 @@ namespace mindnalytics
             selectedList = "Narrativas";
         }
 
+        ItemsEstudio itemEst;
+        Estudio estudio;
+        
+
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
-            
+            //tablaTimeline
+            foreach (DataGridViewRow item in tablaTimeline.Rows)
+                    {
+                        itemEst = new ItemsEstudio(
+                                int.Parse(item.Cells["#"].Value.ToString()),
+                                item.Cells["Nombre"].Value.ToString(),
+                                item.Cells["Tipo"].Value.ToString()
+                            );
+                        
+                        Console.WriteLine(item.Cells["Nombre"].Value.ToString());
+                        listaItemsEstudio.Add(itemEst);
+
+                    }
+            estudio = new Estudio(assets.ProjectName, assets.folderName, listaItemsEstudio);
+            assets.mySerializer.Serialize(estudio,assets.folderName + "\\" +  assets.ProjectName + ".xml");
+
+            DialogResult dialogResult = MessageBox.Show("Desea aplicar el estudio ahora mismo?", "Continuar", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+                
+
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                Application.Exit();
+            }
         }
     }
 }

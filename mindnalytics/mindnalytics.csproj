@@ -67,6 +67,7 @@
     <Compile Include="CargarNarrativas.Designer.cs">
       <DependentUpon>CargarNarrativas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estudio.cs" />
     <Compile Include="Experimento.cs" />
     <Compile Include="Grupo.cs" />
     <Compile Include="GrupoNarrativa.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="ImagenNeutral.Designer.cs">
       <DependentUpon>ImagenNeutral.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemsEstudio.cs" />
     <Compile Include="MindAnalytics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +111,12 @@
     <Compile Include="QR.cs" />
     <Compile Include="ReaderEmotiv.cs" />
     <Compile Include="Registro.cs" />
+    <Compile Include="StartEstudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartEstudio.Designer.cs">
+      <DependentUpon>StartEstudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="TimeLine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +152,9 @@
     </Compile>
     <EmbeddedResource Include="GrupoAssets.resx">
       <DependentUpon>GrupoAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartEstudio.resx">
+      <DependentUpon>StartEstudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TimeLine.resx">
       <DependentUpon>TimeLine.cs</DependentUpon>
