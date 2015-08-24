@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Experimento.cs" />
     <Compile Include="Grupo.cs" />
+    <Compile Include="GrupoNarrativa.cs" />
     <Compile Include="Guardar.cs" />
     <Compile Include="ImagenNeutral.cs">
       <SubType>Form</SubType>
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="Narrativa.cs" />
     <Compile Include="Neutral.cs" />
+    <Compile Include="NuevoEstudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoEstudio.Designer.cs">
+      <DependentUpon>NuevoEstudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObjetoAnalisis.cs" />
     <Compile Include="Preview.cs">
       <SubType>Form</SubType>
@@ -119,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MindAnalytics.resx">
       <DependentUpon>MindAnalytics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoEstudio.resx">
+      <DependentUpon>NuevoEstudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Preview.resx">
       <DependentUpon>Preview.cs</DependentUpon>

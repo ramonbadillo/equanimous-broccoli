@@ -26,9 +26,12 @@ namespace mindnalytics
         Grupo grupoForList;
         public List<Grupo> grupoToSave = new List<Grupo>();
 
-
-        public CargarAssets()
+        public string folderName;
+        public string ProjectName;
+        public CargarAssets(string ProjectName, string folderName)
         {
+            this.ProjectName = ProjectName;
+            this.folderName = folderName;
             InitializeComponent();
             openFileDialog1.Filter = "Image Files (jpg,jpeg,png)|*.jpg;*.jpeg;*.png|Sound Files (wav,ogg,m4a)|*.wav;*.ogg;*.m4a";
             openFileDialog1.FilterIndex = 1;
@@ -156,20 +159,12 @@ namespace mindnalytics
         }
 
 
-        public string folderName = "";
 
+        public SharpSerializer mySerializer = new SharpSerializer();
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
             grupoToSave.Clear();
-            if (folderName == "")
-            {
-                DialogResult result = folderBrowserDialog1.ShowDialog();
-                if (result == DialogResult.OK)
-                    folderName = folderBrowserDialog1.SelectedPath;
-                else
-                    return;
-                //Console.WriteLine(folderName);
-            }
+            
 
             foreach (GrupoAssets grupo in listaGrupos)
             {
@@ -197,7 +192,7 @@ namespace mindnalytics
                     
 
                     grupoForList = new Grupo(grupo.txtName.Text, int.Parse(grupo.numZOrder.Value.ToString()), listaAssets);
-                    SharpSerializer mySerializer = new SharpSerializer();
+                    
                     
                     mySerializer.Serialize(grupoForList, folderName + "\\" + grupo.txtName.Text+ ".xml");
                     grupoToSave.Add(grupoForList);

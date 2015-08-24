@@ -20,7 +20,7 @@ namespace mindnalytics
         public List<Double> ListEngage = new List<Double>();
         public List<Double> ListExcitement = new List<Double>();
         public List<Double> ListMeditation = new List<Double>();
-        bool neutralidad = false;
+        
         bool registro = false;
         Timer MyTimer = new Timer();
         long durationOA = 20 * 1000;
@@ -119,7 +119,7 @@ namespace mindnalytics
 
         private void button1_Click(object sender, EventArgs e)
         {
-            neutralidad = true;
+            
             CreateExcel();
         }
 

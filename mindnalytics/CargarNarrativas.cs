@@ -78,6 +78,7 @@ namespace mindnalytics
         }
 
         string imagenPath;
+
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
             listaNarrativas.Clear();
@@ -100,9 +101,9 @@ namespace mindnalytics
                     listaNarrativas.Add(narr);
 
                 }
-
-
-
+                GrupoNarrativa grupoNarrativa = new GrupoNarrativa(listaNarrativas);
+                assets.mySerializer.Serialize(grupoNarrativa, assets.folderName + "\\" + "Narrativas-"+ assets.ProjectName + ".xml");
+                //assets.ProjectName;
                 this.Hide();
                 assets.tiempo.Show();
                 assets.tiempo.refreshLists();

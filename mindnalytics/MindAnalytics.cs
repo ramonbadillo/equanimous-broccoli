@@ -19,9 +19,9 @@ namespace mindnalytics
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CargarAssets cargar = new CargarAssets();
+            NuevoEstudio estudio = new NuevoEstudio();
             this.Hide();
-            cargar.ShowDialog();
+            estudio.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
