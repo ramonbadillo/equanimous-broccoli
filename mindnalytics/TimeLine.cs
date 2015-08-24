@@ -20,7 +20,7 @@ namespace mindnalytics
         public CargarAssets assets;
         string selectedList = "None";
 
-        public List<ItemsEstudio> listaItemsEstudio = new List<ItemsEstudio>();
+        
 
         public TimeLine(CargarAssets assets)
         {
@@ -109,8 +109,8 @@ namespace mindnalytics
 
         ItemsEstudio itemEst;
         Estudio estudio;
-        
 
+        List<ItemsEstudio> listaItemsEstudioA = new List<ItemsEstudio>();
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
             //tablaTimeline
@@ -123,10 +123,10 @@ namespace mindnalytics
                             );
                         
                         Console.WriteLine(item.Cells["Nombre"].Value.ToString());
-                        listaItemsEstudio.Add(itemEst);
+                        listaItemsEstudioA.Add(itemEst);
 
                     }
-            estudio = new Estudio(assets.ProjectName, assets.folderName, listaItemsEstudio);
+            estudio = new Estudio(assets.ProjectName, assets.folderName, listaItemsEstudioA);
             assets.mySerializer.Serialize(estudio,assets.folderName + "\\" +  assets.ProjectName + ".xml");
 
             DialogResult dialogResult = MessageBox.Show("Desea aplicar el estudio ahora mismo?", "Continuar", MessageBoxButtons.YesNo);

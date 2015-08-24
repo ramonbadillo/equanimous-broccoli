@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotNetEmotivSDK">
-      <HintPath>..\..\EjemploReader\FinalEEGReader\FinalEEGReader\bin\Debug\DotNetEmotivSDK.dll</HintPath>
+      <HintPath>..\..\..\Visual Studio 2013\Projects\EmoSmile\EmoSmile\bin\Debug\DotNetEmotivSDK.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Numerics">
       <HintPath>..\packages\MathNet.Numerics.3.7.0\lib\net40\MathNet.Numerics.dll</HintPath>

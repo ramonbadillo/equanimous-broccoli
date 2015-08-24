@@ -25,7 +25,7 @@ namespace mindnalytics
         Timer MyTimer = new Timer();
         long durationOA = 20 * 1000;
         Stopwatch stopWatch = new Stopwatch();
-        int numSamples = 16;
+        int numSamples = 5;
 
         public ImagenNeutral()
         {
@@ -70,11 +70,13 @@ namespace mindnalytics
             if (QR.neutral(ReaderEmotiv.scoreExcitement))
             {
                 registro = true;
+                Console.WriteLine("Acabo el neutral");
                 //poner la imagen siguiente
                 stopWatch.Start();
             }
 
-            Console.WriteLine(ReaderEmotiv.scoreExcitement);
+            Console.WriteLine("N: "+ReaderEmotiv.scoreExcitement);
+            
         }
 
         ObjetoAnalisis OAS;
@@ -84,23 +86,33 @@ namespace mindnalytics
 
         public void RegistroEmotiv() {
 
-            Console.WriteLine(stopWatch.ElapsedMilliseconds / 1000);
+            Console.WriteLine("S: "+stopWatch.ElapsedMilliseconds / 1000);
             if (stopWatch.ElapsedMilliseconds >= durationOA)
             {
                 //set Imagen en Neutral
                 
                 stopWatch.Stop();
                 //stopWatch.Restart();
+                stopWatch.Reset();
+                List<int[]> scores = QR.exitementScore(ListExcitement, numSamples);
+                //int scoreQRT = QR.exitementScore(ListExcitement, numSamples);
+                //Console.WriteLine("QRScore: "+scoreQRT);
+                Console.WriteLine("Scores");
+                Console.WriteLine(getScoresBonitos(scores));
+                //scores.ForEach(i => Console.Write("{0},\t", i));
+                /*
                 OAS = new ObjetoAnalisis(
                     nombreGrupo, 
-                    nombreOA, 
-                    QR.exitementScore(ListExcitement, numSamples),
+                    nombreOA,
+                    scoreQRT,
                     nombreExperimento,
                     ListEngage,
                     ListExcitement,
                     ListMeditation
                 );
                 OAS.Save();
+                 */
+                QR.countNeutral = 0;
                 registro = false;
                 ClearLists();
             }
@@ -115,6 +127,21 @@ namespace mindnalytics
             //ListEngage.ForEach(i => Console.Write("{0}\t", i));
             
         
+        }
+
+
+        private string getScoresBonitos(List<int[]> scores){
+            string valoresBonitos= "";
+            int positivo = 0, neutral = 0, negativo = 0 ;
+
+            foreach (int[] item in scores)
+            {
+                positivo += item[0];
+                neutral  += item[1];
+                negativo += item[2];
+            }
+            valoresBonitos = "["+positivo+","+neutral+","+negativo+"]";
+            return valoresBonitos;
         }
 
         private void button1_Click(object sender, EventArgs e)
