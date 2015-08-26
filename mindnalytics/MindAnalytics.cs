@@ -26,9 +26,24 @@ namespace mindnalytics
 
         private void button2_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "XML Files (xml)|*.xml";
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+
+                StartEstudio estudio = new StartEstudio(file);
+                estudio.Show();
+                this.Hide();
+            }
+            
+            
+            
+            /*
             ImagenNeutral neutral = new ImagenNeutral();
             this.Hide();
             neutral.Show();
+             */
         }
     }
 }

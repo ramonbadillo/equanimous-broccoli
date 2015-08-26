@@ -164,52 +164,60 @@ namespace mindnalytics
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
             grupoToSave.Clear();
-            
 
-            foreach (GrupoAssets grupo in listaGrupos)
-            {
-                if (grupo.txtName.Text != "" && grupo.tablaAssets.RowCount != 0)
+            if (this.txtNeutral.Text != "") { 
+                foreach (GrupoAssets grupo in listaGrupos)
                 {
-
-                    List<Asset> listaAssets = new List<Asset>();
-                    Asset assetAt;
-
-                    //Console.WriteLine(grupo.txtName.Text);
-                    //Console.WriteLine(grupo.numZOrder.Value);
-                    foreach (DataGridViewRow item in grupo.tablaAssets.Rows)
+                    if (grupo.txtName.Text != "" && grupo.tablaAssets.RowCount != 0)
                     {
-                        assetAt = new Asset(
-                                            item.Cells["Nombre"].Value.ToString(),
-                                            int.Parse(item.Cells["X"].Value.ToString()),
-                                            int.Parse(item.Cells["Y"].Value.ToString()),
-                                            item.Cells["Path"].Value.ToString());
-                        Console.WriteLine(item.Cells["Nombre"].Value.ToString()
-                        );
-                        listaAssets.Add(assetAt);
+
+                        List<Asset> listaAssets = new List<Asset>();
+                        Asset assetAt;
+
+                        //Console.WriteLine(grupo.txtName.Text);
+                        //Console.WriteLine(grupo.numZOrder.Value);
+                        foreach (DataGridViewRow item in grupo.tablaAssets.Rows)
+                        {
+                            assetAt = new Asset(
+                                                item.Cells["Nombre"].Value.ToString(),
+                                                int.Parse(item.Cells["X"].Value.ToString()),
+                                                int.Parse(item.Cells["Y"].Value.ToString()),
+                                                item.Cells["Path"].Value.ToString());
+                            Console.WriteLine(item.Cells["Nombre"].Value.ToString()
+                            );
+                            listaAssets.Add(assetAt);
+
+                        }
+                        //Console.WriteLine(grupo.numZOrder.Value.ToString());
+                    
+
+                        grupoForList = new Grupo(grupo.txtName.Text, int.Parse(grupo.numZOrder.Value.ToString()), listaAssets);
+                    
+                    
+                        mySerializer.Serialize(grupoForList, folderName + "\\" + grupo.txtName.Text+ ".xml");
+                        grupoToSave.Add(grupoForList);
 
                     }
-                    //Console.WriteLine(grupo.numZOrder.Value.ToString());
-                    
+                    else
+                    {
+                        MessageBox.Show("Informacion faltante en el Grupo: " + grupo.nGrupo+1);
+                        return;
+                    }
+                }// end foreach
 
-                    grupoForList = new Grupo(grupo.txtName.Text, int.Parse(grupo.numZOrder.Value.ToString()), listaAssets);
-                    
-                    
-                    mySerializer.Serialize(grupoForList, folderName + "\\" + grupo.txtName.Text+ ".xml");
-                    grupoToSave.Add(grupoForList);
+                this.Hide();
+            
+                narrativas.Show();
+            }
+            else
+            {
+                MessageBox.Show("Informacion faltante en el campo de Imagen Neutral");
+                return;
 
-                }
-                else
-                {
-                    MessageBox.Show("Informacion faltante en el Grupo: " + grupo.nGrupo+1);
-                    return;
-                }
             }
 
-            this.Hide();
             
-            narrativas.Show();
-            //tiempo = new TimeLine(grupoToSave);
-            //tiempo.Show();
+            
             
         }
 

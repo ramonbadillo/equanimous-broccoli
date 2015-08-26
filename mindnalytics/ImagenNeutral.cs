@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 using System.IO;
 using System.Diagnostics;
-
+using System.Media;
 
 namespace mindnalytics
 {
@@ -27,9 +27,21 @@ namespace mindnalytics
         Stopwatch stopWatch = new Stopwatch();
         int numSamples = 5;
 
-        public ImagenNeutral()
+        public Estudio estudioAbierto;
+        public string NombreEstudio;
+
+        public ImagenNeutral(Estudio estudioAbierto, string NombreEstudio )
         {
+            this.estudioAbierto = estudioAbierto;
+            this.NombreEstudio = NombreEstudio;
             InitializeComponent();
+        }
+
+        SoundPlayer player;
+        private void PreviewSound(String path)
+        {
+            this.player = new System.Media.SoundPlayer(@"" + path);
+            this.player.Play();
         }
 
         private void ImagenNeutral_Load(object sender, EventArgs e)

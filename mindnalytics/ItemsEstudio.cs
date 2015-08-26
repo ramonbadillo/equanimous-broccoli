@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mindnalytics
 {
-    class ItemsEstudio
+    public class ItemsEstudio
     {
 
         private int numero;

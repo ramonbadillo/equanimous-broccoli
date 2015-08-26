@@ -254,7 +254,6 @@
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button btnPreview;
-        private System.Windows.Forms.TextBox txtNeutral;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAddNewGroup;
         private System.Windows.Forms.Button btnNeutral;
@@ -262,6 +261,7 @@
         private System.Windows.Forms.Button btnCargarAssets;
         private System.Windows.Forms.OpenFileDialog openFileDialog3;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        public System.Windows.Forms.TextBox txtNeutral;
 
         //GrupoAssets grupo = new GrupoAssets();
         #endregion

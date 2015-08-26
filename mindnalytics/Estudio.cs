@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mindnalytics
 {
-    class Estudio
+    public class Estudio
     {
 
         private string projectName;
@@ -23,6 +23,15 @@ namespace mindnalytics
             get { return folderName; }
             set { folderName = value; }
         }
+
+        private string neutralImage;
+
+        public string NeutralImage
+        {
+            get { return neutralImage; }
+            set { neutralImage = value; }
+        }
+
         private List<ItemsEstudio> listaItemsEstudio;
 
         public List<ItemsEstudio> ListaItemsEstudio
@@ -31,11 +40,13 @@ namespace mindnalytics
             set { listaItemsEstudio = value; }
         }
 
-        public Estudio(string projectName, string folderName, List<ItemsEstudio> listaItemsEstudio)
+        public Estudio(string projectName, string folderName,string neutralImage, List<ItemsEstudio> listaItemsEstudio)
         {
             this.projectName = projectName;
             this.folderName = folderName;
+            this.neutralImage = neutralImage;
             this.listaItemsEstudio = listaItemsEstudio;
+            
         }
 
         public Estudio()

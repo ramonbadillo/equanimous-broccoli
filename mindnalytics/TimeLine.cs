@@ -117,7 +117,7 @@ namespace mindnalytics
             foreach (DataGridViewRow item in tablaTimeline.Rows)
                     {
                         itemEst = new ItemsEstudio(
-                                int.Parse(item.Cells["#"].Value.ToString()),
+                                int.Parse(item.Cells["Numero"].Value.ToString()),
                                 item.Cells["Nombre"].Value.ToString(),
                                 item.Cells["Tipo"].Value.ToString()
                             );
@@ -126,7 +126,7 @@ namespace mindnalytics
                         listaItemsEstudioA.Add(itemEst);
 
                     }
-            estudio = new Estudio(assets.ProjectName, assets.folderName, listaItemsEstudioA);
+            estudio = new Estudio(assets.ProjectName, assets.folderName,assets.txtNeutral.Text, listaItemsEstudioA);
             assets.mySerializer.Serialize(estudio,assets.folderName + "\\" +  assets.ProjectName + ".xml");
 
             DialogResult dialogResult = MessageBox.Show("Desea aplicar el estudio ahora mismo?", "Continuar", MessageBoxButtons.YesNo);
