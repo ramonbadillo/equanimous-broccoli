@@ -19,6 +19,8 @@ namespace mindnalytics
         Experimento expe;
         Grupo grupo;
 
+        public List<Asset> listaAssets;
+
         ReaderEmotiv reader = new ReaderEmotiv();
         public List<Double> ListEngage = new List<Double>();
         public List<Double> ListExcitement = new List<Double>();
@@ -37,13 +39,16 @@ namespace mindnalytics
         {
             this.expe = expe;
             this.grupo = grupo;
+            this.listaAssets = grupo.listaAssets;
             this.estudioAbierto = estudioAbierto;
             this.sujetoPrueba = sujetoPrueba;
             this.IN= new ImagenNeutral(estudioAbierto.NeutralImage);
+            setNeutral();
             startEstudio();
+            Console.WriteLine("Inicia Una nueva clase-------------------------------" + listaAssets.Count);
         }
 
-
+        
         public void startEstudio()
         {
             try
@@ -64,6 +69,41 @@ namespace mindnalytics
 
         }
 
+        private void setNeutral()
+        {
+            if (listaAssets.Count > 0)
+            {
+                Console.WriteLine("Se llamo a neutral--------------");
+                IN.Show();
+                IOA.Hide();
+
+            }
+            else
+            {
+                IOA.Hide();
+                IN.Hide();
+                MyTimer.Stop();
+                expe.getElementos();
+            }
+        }
+
+        private void setIOA()
+        {
+            if (listaAssets.Count > 0)
+            { 
+            IOA.Show();
+            IOA.setImage(listaAssets.First());
+            IN.Hide();
+            listaAssets.RemoveAt(0);
+            }
+            else
+            {
+                IOA.Hide();
+                IN.Hide();
+                MyTimer.Stop();
+                expe.getElementos();
+            }
+        }
 
         private void callEmotiv(object sender, EventArgs e)
         {
@@ -71,19 +111,12 @@ namespace mindnalytics
 
             if (registro)
             {
-                IOA.Show();
-                IOA.SetImage();
                 RegistroEmotiv();
-                IN.Hide();
-
-
             }
 
             else
             {
-                IN.Show();
                 CheckNeutral();
-                IOA.Hide();
             }
 
 
@@ -98,6 +131,7 @@ namespace mindnalytics
                 Console.WriteLine("Acabo el neutral");
                 //poner la imagen siguiente
                 stopWatch.Start();
+                setIOA();
             }
 
             Console.WriteLine("N: " + ReaderEmotiv.scoreExcitement);
@@ -141,6 +175,7 @@ namespace mindnalytics
                 QR.countNeutral = 0;
                 registro = false;
                 ClearLists();
+                setNeutral();
             }
 
 

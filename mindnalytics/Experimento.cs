@@ -55,11 +55,11 @@ namespace mindnalytics
             
                 if (estudioAbierto.ListaItemsEstudio.First().Tipo == "GA")
                 {
-                    getGrupoAssets(estudioAbierto.ListaItemsEstudio.First().Nombre);
+                    
                     //Experimento experimento1 = new Experimento(estudioAbierto, sujetoPrueba,this);
-                    //ObjetosAnalisisScores objAnSc = new ObjetosAnalisisScores(estudioAbierto, sujetoPrueba, this);
-                    ImagenOA imgOA = new ImagenOA(this);
-                    imgOA.Show();
+                    ObjetosAnalisisScores objAnSc = new ObjetosAnalisisScores(estudioAbierto, sujetoPrueba, this, getGrupoAssets(estudioAbierto.ListaItemsEstudio.First().Nombre));
+                    //ImagenOA imgOA = new ImagenOA(this);
+                    //imgOA.Show();
                 
                 
                 }

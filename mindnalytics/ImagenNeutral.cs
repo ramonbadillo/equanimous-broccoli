@@ -26,6 +26,12 @@ namespace mindnalytics
         {
 
             pictureBox1.Image = Image.FromFile(iNeutral);
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         

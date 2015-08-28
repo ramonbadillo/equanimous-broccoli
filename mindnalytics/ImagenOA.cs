@@ -22,13 +22,20 @@ namespace mindnalytics
 
         public ImagenOA()
         {
-           
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      
+
+        private void ImagenOA_Load(object sender, EventArgs e)
         {
-            expe.getElementos();
+
+        }
+
+        public void setImage(Asset assetImage)
+        {
+            pictureBox1.Image = Image.FromFile(assetImage.path);
+            pictureBox1.Location = new System.Drawing.Point(assetImage.x, assetImage.y);
         }
     }
 }
