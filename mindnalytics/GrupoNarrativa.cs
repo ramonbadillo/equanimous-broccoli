@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace mindnalytics
 {
-    class GrupoNarrativa
+    public class GrupoNarrativa
     {
 
-        private List<Narrativa> listaAssets;
+        private List<Narrativa> listaNarrativas;
 
         
 
@@ -18,16 +18,16 @@ namespace mindnalytics
 
         }
 
-        public GrupoNarrativa(List<Narrativa> listaAssets)
+        public GrupoNarrativa(List<Narrativa> listaNarrativas)
         {
-            this.listaAssets = listaAssets;
+            this.listaNarrativas = listaNarrativas;
         }
 
 
-        public List<Narrativa> ListaAssets
+        public List<Narrativa> ListaNarrativas
         {
-            get { return listaAssets; }
-            set { listaAssets = value; }
+            get { return listaNarrativas; }
+            set { listaNarrativas = value; }
         }
     }
 }

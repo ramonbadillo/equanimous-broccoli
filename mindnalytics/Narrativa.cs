@@ -12,6 +12,11 @@ namespace mindnalytics
         public string imagen;
         public string path;
 
+        public Narrativa()
+        {
+               
+        }
+
         public Narrativa(string Nombre, string Imagen, string Path)
         {
             this.nombre = Nombre;

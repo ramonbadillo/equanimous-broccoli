@@ -36,8 +36,9 @@ namespace mindnalytics
             /*
              * Conexiones. Adaptar segun sea el caso.
              */
-            //engine.Connect();
-            engine.RemoteConnect("127.0.0.1", 1726);
+            
+            engine.Connect();
+            //engine.RemoteConnect("127.0.0.1", 1726);
 
             aTimer.Elapsed += new System.Timers.ElapsedEventHandler(onTimedEvent);
             aTimer.Interval = 1000;

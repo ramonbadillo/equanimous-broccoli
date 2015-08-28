@@ -69,6 +69,18 @@
     </Compile>
     <Compile Include="Estudio.cs" />
     <Compile Include="Experimento.cs" />
+    <Compile Include="ImagenNarrativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImagenNarrativa.Designer.cs">
+      <DependentUpon>ImagenNarrativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImagenOA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImagenOA.Designer.cs">
+      <DependentUpon>ImagenOA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grupo.cs" />
     <Compile Include="GrupoNarrativa.cs" />
     <Compile Include="Guardar.cs" />
@@ -94,6 +106,7 @@
       <DependentUpon>NuevoEstudio.cs</DependentUpon>
     </Compile>
     <Compile Include="ObjetoAnalisis.cs" />
+    <Compile Include="ObjetosAnalisisScores.cs" />
     <Compile Include="Preview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CargarNarrativas.resx">
       <DependentUpon>CargarNarrativas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImagenNarrativa.resx">
+      <DependentUpon>ImagenNarrativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImagenOA.resx">
+      <DependentUpon>ImagenOA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImagenNeutral.resx">
       <DependentUpon>ImagenNeutral.cs</DependentUpon>
@@ -172,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMNEUDep.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -24,6 +24,7 @@ namespace mindnalytics
         
         public Estudio estudioAbierto;
         public List<ItemsEstudio> listaItemsEstudio;
+        public string iNeutral;
         private void StartEstudio_Load(object sender, EventArgs e)
         {
             try
@@ -34,6 +35,7 @@ namespace mindnalytics
                 Console.WriteLine(estudioAbierto.ProjectName);
                 lblProjectName.Text = estudioAbierto.ProjectName;
                 listaItemsEstudio = estudioAbierto.ListaItemsEstudio;
+                iNeutral = estudioAbierto.NeutralImage;
                 foreach (ItemsEstudio item in listaItemsEstudio)
                 {
                     string[] row = new string[] {""+ item.Numero,item.Nombre,item.Tipo };
@@ -53,12 +55,30 @@ namespace mindnalytics
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (txtNombreEstudio.Text != "" )
+            startEx();
+        }
+
+        private void txtNombreEstudio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                ImagenNeutral neutral = new ImagenNeutral(estudioAbierto,txtNombreEstudio.Text);
-                this.Hide();
-                neutral.Show();
+                startEx();
             }
+        }
+
+
+        public void startEx()
+        {
+
+            if (txtNombreEstudio.Text != "")
+            {
+                //ObjetosAnalisisScores experimento1 = new ObjetosAnalisisScores(estudioAbierto, txtNombreEstudio.Text);
+                Experimento experimentoBueno = new Experimento(estudioAbierto, txtNombreEstudio.Text);
+                //ImagenNeutral neutral = new ImagenNeutral();
+                this.Hide();
+                //neutral.Show();
+            }
+
         }
     }
 }

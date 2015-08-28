@@ -32,11 +32,11 @@
             this.txtNombreEstudio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblProjectName = new System.Windows.Forms.Label();
-            this.tablaTimeline = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tablaTimeline = new System.Windows.Forms.DataGridView();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,10 +57,11 @@
             // 
             // txtNombreEstudio
             // 
-            this.txtNombreEstudio.Location = new System.Drawing.Point(81, 575);
+            this.txtNombreEstudio.Location = new System.Drawing.Point(82, 577);
             this.txtNombreEstudio.Name = "txtNombreEstudio";
             this.txtNombreEstudio.Size = new System.Drawing.Size(388, 22);
             this.txtNombreEstudio.TabIndex = 1;
+            this.txtNombreEstudio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreEstudio_KeyPress);
             // 
             // label1
             // 
@@ -81,6 +82,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nombre del Estudio";
             // 
+            // lblProjectName
+            // 
+            this.lblProjectName.AutoSize = true;
+            this.lblProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjectName.Location = new System.Drawing.Point(9, 27);
+            this.lblProjectName.Name = "lblProjectName";
+            this.lblProjectName.Size = new System.Drawing.Size(303, 20);
+            this.lblProjectName.TabIndex = 0;
+            this.lblProjectName.Text = "Estudio de Pueba con Nombre muy Largo";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label4);
@@ -93,15 +104,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Time Line del Estudio";
             // 
-            // lblProjectName
+            // label4
             // 
-            this.lblProjectName.AutoSize = true;
-            this.lblProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjectName.Location = new System.Drawing.Point(9, 27);
-            this.lblProjectName.Name = "lblProjectName";
-            this.lblProjectName.Size = new System.Drawing.Size(303, 20);
-            this.lblProjectName.TabIndex = 0;
-            this.lblProjectName.Text = "Estudio de Pueba con Nombre muy Largo";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(396, 455);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 16);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(302, 455);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 16);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "label3";
             // 
             // tablaTimeline
             // 
@@ -120,24 +139,6 @@
             this.tablaTimeline.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaTimeline.Size = new System.Drawing.Size(428, 427);
             this.tablaTimeline.TabIndex = 29;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(302, 455);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 16);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(396, 455);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "label4";
             // 
             // Numero
             // 
