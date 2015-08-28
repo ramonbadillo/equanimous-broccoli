@@ -55,7 +55,7 @@ namespace mindnalytics
                 }
                 
             }
-            if(selectedList=="Narrativas"){
+            else if(selectedList=="Narrativas"){
                 string name = "";
                 foreach (ListViewItem item in listView2.SelectedItems)
                 {
@@ -133,13 +133,21 @@ namespace mindnalytics
             if (dialogResult == DialogResult.Yes)
             {
                 //do something
-                
+                StartEstudio estudioSiguiente = new StartEstudio(assets.folderName + "\\" + assets.ProjectName + ".xml");
+                estudioSiguiente.Show();
+                this.Dispose();
+                assets.Dispose();
 
             }
             else if (dialogResult == DialogResult.No)
             {
                 Application.Exit();
             }
+        }
+
+        private void btnRmvAsset_Click(object sender, EventArgs e)
+        {
+            tablaTimeline.Rows.RemoveAt(tablaTimeline.SelectedRows[0].Index);
         }
     }
 }

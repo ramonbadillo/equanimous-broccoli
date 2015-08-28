@@ -143,6 +143,7 @@
             this.btnRmvAsset.TabIndex = 39;
             this.btnRmvAsset.Text = "-";
             this.btnRmvAsset.UseVisualStyleBackColor = true;
+            this.btnRmvAsset.Click += new System.EventHandler(this.btnRmvAsset_Click);
             // 
             // btnAddAsset
             // 

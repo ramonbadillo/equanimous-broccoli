@@ -33,7 +33,7 @@
             this.btnAddFile = new System.Windows.Forms.Button();
             this.btnRmvAsset = new System.Windows.Forms.Button();
             this.btnAddAsset = new System.Windows.Forms.Button();
-            this.tablaAssets = new System.Windows.Forms.DataGridView();
+            this.tablaNarrativas = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boton = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -42,7 +42,7 @@
             this.btnTimeLine = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaAssets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaNarrativas)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -96,25 +96,25 @@
             this.btnAddAsset.UseVisualStyleBackColor = true;
             this.btnAddAsset.Click += new System.EventHandler(this.btnAddAsset_Click);
             // 
-            // tablaAssets
+            // tablaNarrativas
             // 
-            this.tablaAssets.AllowUserToAddRows = false;
-            this.tablaAssets.AllowUserToDeleteRows = false;
-            this.tablaAssets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaAssets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tablaNarrativas.AllowUserToAddRows = false;
+            this.tablaNarrativas.AllowUserToDeleteRows = false;
+            this.tablaNarrativas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaNarrativas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Imagen,
             this.boton,
             this.Path});
-            this.tablaAssets.Location = new System.Drawing.Point(293, 72);
-            this.tablaAssets.Margin = new System.Windows.Forms.Padding(5);
-            this.tablaAssets.MultiSelect = false;
-            this.tablaAssets.Name = "tablaAssets";
-            this.tablaAssets.RowHeadersVisible = false;
-            this.tablaAssets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaAssets.Size = new System.Drawing.Size(715, 364);
-            this.tablaAssets.TabIndex = 36;
-            this.tablaAssets.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaAssets_CellClick);
+            this.tablaNarrativas.Location = new System.Drawing.Point(293, 72);
+            this.tablaNarrativas.Margin = new System.Windows.Forms.Padding(5);
+            this.tablaNarrativas.MultiSelect = false;
+            this.tablaNarrativas.Name = "tablaNarrativas";
+            this.tablaNarrativas.RowHeadersVisible = false;
+            this.tablaNarrativas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaNarrativas.Size = new System.Drawing.Size(715, 364);
+            this.tablaNarrativas.TabIndex = 36;
+            this.tablaNarrativas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaAssets_CellClick);
             // 
             // Nombre
             // 
@@ -178,14 +178,14 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRmvAsset);
             this.Controls.Add(this.btnAddAsset);
-            this.Controls.Add(this.tablaAssets);
+            this.Controls.Add(this.tablaNarrativas);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnAddFile);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CargarNarrativas";
             this.Text = "CargarNarrativas";
-            ((System.ComponentModel.ISupportInitialize)(this.tablaAssets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaNarrativas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,7 +197,7 @@
         private System.Windows.Forms.Button btnAddFile;
         private System.Windows.Forms.Button btnRmvAsset;
         private System.Windows.Forms.Button btnAddAsset;
-        public System.Windows.Forms.DataGridView tablaAssets;
+        public System.Windows.Forms.DataGridView tablaNarrativas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnTimeLine;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
