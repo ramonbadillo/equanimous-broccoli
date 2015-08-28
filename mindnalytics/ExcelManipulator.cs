@@ -10,7 +10,7 @@ namespace mindnalytics
 {
     class ExcelManipulator
     {
-        Excel.Application excelApp = new Excel.Application();
+        public static Excel.Application excelApp = new Excel.Application();
 
 
         public bool checkOffice() 
@@ -25,7 +25,7 @@ namespace mindnalytics
             return excelRunning;
         }
 
-        public void guardarObjeto(ObjetoAnalisis oa)
+        public static void guardarObjeto()
         {
             excelApp.Visible = true;
 
