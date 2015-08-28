@@ -38,6 +38,9 @@
     <Reference Include="MathNet.Numerics">
       <HintPath>..\packages\MathNet.Numerics.3.7.0\lib\net40\MathNet.Numerics.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Polenter.SharpSerializer">
       <HintPath>..\packages\SharpSerializer.2.20\lib\net20\Polenter.SharpSerializer.dll</HintPath>
     </Reference>
@@ -68,6 +71,7 @@
       <DependentUpon>CargarNarrativas.cs</DependentUpon>
     </Compile>
     <Compile Include="Estudio.cs" />
+    <Compile Include="ExcelManipulator.cs" />
     <Compile Include="Experimento.cs" />
     <Compile Include="ImagenNarrativa.cs">
       <SubType>Form</SubType>
