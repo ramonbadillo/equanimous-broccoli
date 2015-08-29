@@ -3,57 +3,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Excel = Microsoft.Office.Interop.Excel;
+using System.IO;
 
 
 namespace mindnalytics
 {
     class ExcelManipulator
-    {
-        public static Excel.Application excelApp = new Excel.Application();
+    { 
+        public static void saveOA(ObjetoAnalisis oa, String FilePath)
+        {
+            var csv = new StringBuilder();
+            csv.Append("OA , Experiment , Grupo , Path , QRP, QRN , QRM , Raw Scores "+Environment.NewLine);
+            csv.Append("" + oa.nombreOA + " , " + oa.nombreExperimento + " , " + oa.grupo + " , " + oa.path
+                + " , " + oa.qrp + " , " + oa.qrn + " , " + oa.qrm + " , " + Environment.NewLine);
 
-
-        public bool checkOffice() 
-        { 
-            bool excelRunning = false;
-
-            if(excelApp != null)
-                excelRunning = true;
-            else
-                Console.WriteLine("Excel could not be started. Check your office instalation");
-
-            return excelRunning;
+            File.AppendAllText(FilePath,csv.ToString());
+                
         }
 
-        public static void guardarObjeto()
+        public static ObjetoAnalisis readOA(String FilePath)
         {
-            excelApp.Visible = true;
+            ObjetoAnalisis oa = new ObjetoAnalisis();
+            var reader = new StreamReader(File.OpenRead(@""+FilePath+".csv"));
+            int i = 1;
+            while (!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                var values = line.Split(';');
 
-            Excel.Workbook workBook = excelApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
-            Excel.Worksheet workSheet = (Excel.Worksheet) workBook.Worksheets[1];
-
-            if(workSheet == null){
-                Console.WriteLine("Worksheet could not be created.");
+                if (i > 1) 
+                {
+                    oa.nombreOA = values[0];
+                    oa.nombreExperimento = values[1];
+                    oa.grupo = values[2];
+                    oa.path = values[3];
+                    oa.qrp = Int32.Parse(values[4]);
+                    oa.qrn = Int32.Parse(values[5]);
+                    oa.qrm = Int32.Parse(values[6]);
+                    //oa.ScoreEngage = ScoreEngage;
+                    //oa.ScoreExcitement = ScoreExcitement;
+                    //oa.ScoreMeditation = ScoreMeditation;
+                }
+                i++;
             }
-
-            excelApp.Range["A1"].Value = "Nombre Experimento";
-            excelApp.Range["B1"].Value = "Nombre OA";
-            excelApp.Range["C1"].Value = "Path";
-            excelApp.Range["D1"].Value = "QR+";
-            excelApp.Range["E1"].Value = "QR-";
-            excelApp.Range["F1"].Value = "QRN";
-            excelApp.Range["G1"].Value = "Data";
-
-            Excel.Range range = workSheet.get_Range("A2", "F2");
-
-            excelApp.Range["A2"].Value = "oa.nombreExperimento";
-            excelApp.Range["B2"].Value = "oa.nombreOA";
-            excelApp.Range["C2"].Value = "";
-            excelApp.Range["D2"].Value = "";
-            excelApp.Range["E2"].Value = "";
-            excelApp.Range["F2"].Value = "";
-            excelApp.Range["G2"].Value = "Data";
-
+            
+            return oa;
         }
     }
 }
