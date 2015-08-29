@@ -61,14 +61,14 @@ namespace mindnalytics
 
                     string[] row = new string[] { name.Split('\\').Last(), "", "", name };
 
-                    tablaAssets.Rows.Add(row);
+                    tablaNarrativas.Rows.Add(row);
                 }
             }
         }
 
         private void btnRmvAsset_Click(object sender, EventArgs e)
         {
-            tablaAssets.Rows.RemoveAt(tablaAssets.SelectedRows[0].Index);
+            tablaNarrativas.Rows.RemoveAt(tablaNarrativas.SelectedRows[0].Index);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,9 +82,9 @@ namespace mindnalytics
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
             listaNarrativas.Clear();
-            if (tablaAssets.RowCount != 0)
+            if (tablaNarrativas.RowCount != 0)
             {
-                foreach (DataGridViewRow item in tablaAssets.Rows)
+                foreach (DataGridViewRow item in tablaNarrativas.Rows)
                 {
                     if(item.Cells["Imagen"].Value.ToString() != null){
                         imagenPath = item.Cells["Imagen"].Value.ToString();
@@ -141,7 +141,7 @@ namespace mindnalytics
                 if (result == DialogResult.OK) // Test result.
                 {
                     string file = openFileDialog2.FileName;
-                    tablaAssets.Rows[e.RowIndex].Cells[1].Value = file;
+                    tablaNarrativas.Rows[e.RowIndex].Cells[1].Value = file;
                     //txtNarrFinal.Text = file;
                 }
 

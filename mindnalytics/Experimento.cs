@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace mindnalytics
 {
@@ -71,13 +72,15 @@ namespace mindnalytics
                 }
                 else
                 {
-                    Console.WriteLine("Hay un error con el archivo del proyecto");
+                    Console.WriteLine("El item que se intenta cargar es incorrecto");
                 }
 
                 estudioAbierto.ListaItemsEstudio.RemoveAt(0);
             }
-            else
+            else { 
                 Console.WriteLine("El experimento ya ha terminado");
+                Application.Exit();
+            }
         }
 
         Narrativa narr;
