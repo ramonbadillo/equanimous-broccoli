@@ -27,7 +27,7 @@ namespace mindnalytics
         private void button2_Click(object sender, EventArgs e)
         {
 
-            ExcelManipulator.guardarObjeto();
+           
             openFileDialog1.Filter = "XML Files (xml)|*.xml";
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.

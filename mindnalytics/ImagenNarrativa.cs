@@ -30,6 +30,7 @@ namespace mindnalytics
 
         private void ImagenNarrativa_Load(object sender, EventArgs e)
         {
+
             PreviewSound(narr.path);
             
         }

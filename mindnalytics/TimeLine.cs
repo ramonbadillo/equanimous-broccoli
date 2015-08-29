@@ -128,7 +128,8 @@ namespace mindnalytics
                     }
             estudio = new Estudio(assets.ProjectName, assets.folderName,assets.txtNeutral.Text, listaItemsEstudioA);
             assets.mySerializer.Serialize(estudio,assets.folderName + "\\" +  assets.ProjectName + ".xml");
-
+            Console.WriteLine("Llamando Excel----" + assets.folderName, assets.ProjectName + "-Results");
+            ExcelManipulator.createOAExcel(assets.folderName, assets.ProjectName+"-Results");
             DialogResult dialogResult = MessageBox.Show("Desea aplicar el estudio ahora mismo?", "Continuar", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

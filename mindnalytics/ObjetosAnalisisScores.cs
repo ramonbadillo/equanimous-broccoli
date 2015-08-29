@@ -33,7 +33,7 @@ namespace mindnalytics
         int numSamples = 5;
         ImagenOA IOA = new ImagenOA();
         ImagenNeutral IN;
-
+        Asset currentAsset;
 
         public ObjetosAnalisisScores(Estudio estudioAbierto, string sujetoPrueba,Experimento expe,Grupo grupo)
         {
@@ -93,6 +93,7 @@ namespace mindnalytics
             { 
             IOA.Show();
             IOA.setImage(listaAssets.First());
+            currentAsset = listaAssets.First();
             IN.Hide();
             listaAssets.RemoveAt(0);
             }
@@ -155,6 +156,21 @@ namespace mindnalytics
                 //stopWatch.Restart();
                 stopWatch.Reset();
                 List<int[]> scores = QR.exitementScore(ListExcitement, numSamples);
+
+                ObjetoAnalisis objAn = new ObjetoAnalisis(
+                                        currentAsset.nombre,
+                                        sujetoPrueba,
+                                        grupo.nombre,
+                                        currentAsset.path,
+                                        getScoresBonitos(scores)[0],
+                                        getScoresBonitos(scores)[1],
+                                        getScoresBonitos(scores)[2],
+                                        ListEngage,
+                                        ListExcitement,
+                                        ListMeditation
+
+                    );
+                objAn.Save(estudioAbierto.FolderName, estudioAbierto.ProjectName + "-Results");
                 //int scoreQRT = QR.exitementScore(ListExcitement, numSamples);
                 //Console.WriteLine("QRScore: "+scoreQRT);
                 Console.WriteLine("Scores");
@@ -191,9 +207,9 @@ namespace mindnalytics
         }
 
 
-        private string getScoresBonitos(List<int[]> scores)
+        private int[] getScoresBonitos(List<int[]> scores)
         {
-            string valoresBonitos = "";
+            int[] valoresBonitos = new int[3];
             int positivo = 0, neutral = 0, negativo = 0;
 
             foreach (int[] item in scores)
@@ -202,7 +218,8 @@ namespace mindnalytics
                 neutral += item[1];
                 negativo += item[2];
             }
-            valoresBonitos = "[" + positivo + "," + neutral + "," + negativo + "]";
+            valoresBonitos =  new int[] {  positivo , neutral , negativo };
+
             return valoresBonitos;
         }
 

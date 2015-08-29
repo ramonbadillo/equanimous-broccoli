@@ -13,10 +13,12 @@ namespace mindnalytics
 
         public static void createOAExcel(String FilePath, String FileName)
         {
+            Console.WriteLine("Creando Excel");
             var csv = new StringBuilder();
             csv.Append("Experiment , OA , Grupo , Path , QRP, QRN , QRM " + Environment.NewLine);
 
-            File.WriteAllText(FilePath+FileName+".csv", csv.ToString());
+            File.WriteAllText(FilePath + "//" + FileName + ".csv", csv.ToString());
+            Console.WriteLine(FilePath+"//" + FileName + ".csv");
 
         }
         
@@ -26,18 +28,21 @@ namespace mindnalytics
             csv.Append("" + oa.nombreExperimento + " , " + oa.nombreOA + " , " + oa.grupo + " , " + oa.path
                 + " , " + oa.qrp + " , " + oa.qrn + " , " + oa.qrm + Environment.NewLine);
 
-            File.AppendAllText(FilePath+FileName+".csv",csv.ToString());
+            File.AppendAllText(FilePath + "//" + FileName + ".csv", csv.ToString());
+
+            saveRawOA(oa, FilePath, FileName);
                 
         }
 
-        public static void saverRawOA(ObjetoAnalisis oa, String FilePath, String FileName)
+        public static void saveRawOA(ObjetoAnalisis oa, String FilePath, String FileName)
         {
-            saveRaw(oa.nombreOA, oa.nombreExperimento, oa.scoreEngage, 
-                FilePath+FileName+"raw_engagement.csv");
-            saveRaw(oa.nombreOA, oa.nombreExperimento, oa.scoreExcitement, 
-                FilePath+FileName+"raw_excitement.csv");
+
+            saveRaw(oa.nombreOA, oa.nombreExperimento, oa.scoreEngage,
+                FilePath + "//" + FileName + "raw_engagement.csv");
+            saveRaw(oa.nombreOA, oa.nombreExperimento, oa.scoreExcitement,
+                FilePath + "//" + FileName + "raw_excitement.csv");
             saveRaw(oa.nombreOA, oa.nombreExperimento, oa.scoreMeditation,
-               FilePath+FileName+"raw_meditation.csv");
+               FilePath + "//" + FileName + "raw_meditation.csv");
             
         }
 
@@ -59,7 +64,7 @@ namespace mindnalytics
         {
             List<ObjetoAnalisis> listOA = new List<ObjetoAnalisis>();
             ObjetoAnalisis oa = new ObjetoAnalisis();
-            var reader = new StreamReader(File.OpenRead(@""+FilePath+FileName+".csv"));
+            var reader = new StreamReader(File.OpenRead(@"" + FilePath + "//" + FileName + ".csv"));
             int i = 1;
             while (!reader.EndOfStream)
             {
@@ -89,7 +94,7 @@ namespace mindnalytics
             var csv = new StringBuilder();
             csv.Append("OA , Experiment , Grupo , Path , QRP, QRN , QRM , Raw Scores " + Environment.NewLine);
 
-            File.WriteAllText("C:/Users/DrManchas/Documents/prueba.csv", csv.ToString());
+            File.WriteAllText("C://Users//RIV//Desktop//ProyectoPruebaGuardad-Results.csv", csv.ToString());
 
         }
     }
