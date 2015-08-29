@@ -41,7 +41,7 @@ namespace mindnalytics
             
         }
 
-        private static void saveRaw(String Name, String Experiment, List<double> list, String file) 
+        private static void saveRaw(String Name, String Experiment, List<double> list, String file)
         {
             var csv = new StringBuilder();
             csv.Append("" + Name + " , " + Experiment + " , ");
@@ -53,7 +53,7 @@ namespace mindnalytics
             csv.Append(Environment.NewLine);
 
             File.AppendAllText(file, csv.ToString());
-        
+        }
 
         public static List<ObjetoAnalisis> readOA(String FilePath, String FileName)
         {
