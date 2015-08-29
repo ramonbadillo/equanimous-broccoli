@@ -14,7 +14,7 @@ namespace mindnalytics
         public static void createOAExcel(String FilePath, String FileName)
         {
             var csv = new StringBuilder();
-            csv.Append("OA , Experiment , Grupo , Path , QRP, QRN , QRM " + Environment.NewLine);
+            csv.Append("Experiment , OA , Grupo , Path , QRP, QRN , QRM " + Environment.NewLine);
 
             File.WriteAllText(FilePath+FileName+".csv", csv.ToString());
 
@@ -23,7 +23,7 @@ namespace mindnalytics
         public static void saveOA(ObjetoAnalisis oa, String FilePath, String FileName)
         {
             var csv = new StringBuilder();
-            csv.Append("" + oa.nombreOA + " , " + oa.nombreExperimento + " , " + oa.grupo + " , " + oa.path
+            csv.Append("" + oa.nombreExperimento + " , " + oa.nombreOA + " , " + oa.grupo + " , " + oa.path
                 + " , " + oa.qrp + " , " + oa.qrn + " , " + oa.qrm + Environment.NewLine);
 
             File.AppendAllText(FilePath+FileName+".csv",csv.ToString());
@@ -33,18 +33,18 @@ namespace mindnalytics
         public static void saverRawOA(ObjetoAnalisis oa, String FilePath, String FileName)
         {
             saveRaw(oa.nombreOA, oa.nombreExperimento, oa.scoreEngage, 
-                FilePath+FileName+"raw_engagement.cvs");
+                FilePath+FileName+"raw_engagement.csv");
             saveRaw(oa.nombreOA, oa.nombreExperimento, oa.scoreExcitement, 
-                FilePath+FileName+"raw_excitement.cvs");
+                FilePath+FileName+"raw_excitement.csv");
             saveRaw(oa.nombreOA, oa.nombreExperimento, oa.scoreMeditation,
-               FilePath+FileName+"raw_meditation.cvs");
+               FilePath+FileName+"raw_meditation.csv");
             
         }
 
         private static void saveRaw(String Name, String Experiment, List<double> list, String file)
         {
             var csv = new StringBuilder();
-            csv.Append("" + Name + " , " + Experiment + " , ");
+            csv.Append("" + Experiment + " , " + Name + " , ");
 
             foreach (double raw in list)
             {
