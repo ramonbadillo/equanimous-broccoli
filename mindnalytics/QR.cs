@@ -22,9 +22,6 @@ namespace mindnalytics
             {
                 double[] muestra = valores.GetRange(i, numSamples).ToArray();
                 double media = MathNet.Numerics.Statistics.ArrayStatistics.MedianInplace(muestra);
-                Console.Write("i"+i);
-                Console.Write("is" +(i + numSamples));
-                Console.Write("Count: " + valores.Count);
                 if (media > 0.6){
                     exitementScore = new int[] { 1,0,0 };
                 }
