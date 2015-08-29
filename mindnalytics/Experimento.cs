@@ -79,6 +79,7 @@ namespace mindnalytics
             }
             else { 
                 Console.WriteLine("El experimento ya ha terminado");
+                MessageBox.Show("El experimento ya termino", "FIN", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Exit();
             }
         }

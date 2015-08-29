@@ -114,7 +114,8 @@ namespace mindnalytics
                 if (dialogResult == DialogResult.OK)
                 {
 
-                    //do something
+                    GrupoNarrativa grupoNarrativa = new GrupoNarrativa();
+                    assets.mySerializer.Serialize(grupoNarrativa, assets.folderName + "\\" + "Narrativas-" + assets.ProjectName + ".xml");
                     this.Hide();
                     assets.tiempo.Show();
                     assets.tiempo.refreshLists();
