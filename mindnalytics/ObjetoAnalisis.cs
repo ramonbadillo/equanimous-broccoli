@@ -52,9 +52,9 @@ namespace mindnalytics
             
         }
 
-        public void Save()
+        public void Save(String FilePath, String FileName)
         {
-            ExcelManipulator.saveOA(this, "Path");
+            ExcelManipulator.saveOA(this, FilePath, FileName);
         }
 
 
