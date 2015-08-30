@@ -35,7 +35,12 @@ namespace mindnalytics
         public void setImage(Asset assetImage)
         {
             pictureBox1.Image = Image.FromFile(assetImage.path);
-            pictureBox1.Location = new System.Drawing.Point(assetImage.x, assetImage.y);
+            //pictureBox1.Location = new System.Drawing.Point(assetImage.x, assetImage.y);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
