@@ -149,6 +149,7 @@
             this.btnCargarAssets.TabIndex = 30;
             this.btnCargarAssets.Text = "Cargar Grupo de Assets";
             this.btnCargarAssets.UseVisualStyleBackColor = true;
+            this.btnCargarAssets.Visible = false;
             this.btnCargarAssets.Click += new System.EventHandler(this.btnCargarAssets_Click);
             // 
             // btnPreview
@@ -159,6 +160,7 @@
             this.btnPreview.TabIndex = 29;
             this.btnPreview.Text = "Ver Preview";
             this.btnPreview.UseVisualStyleBackColor = true;
+            this.btnPreview.Visible = false;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // txtNeutral
@@ -175,9 +177,9 @@
             this.label3.Location = new System.Drawing.Point(20, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 16);
+            this.label3.Size = new System.Drawing.Size(101, 16);
             this.label3.TabIndex = 27;
-            this.label3.Text = "Imagen Neutral :";
+            this.label3.Text = "Imagen Calma :";
             // 
             // btnAddNewGroup
             // 
@@ -185,7 +187,7 @@
             this.btnAddNewGroup.Name = "btnAddNewGroup";
             this.btnAddNewGroup.Size = new System.Drawing.Size(229, 35);
             this.btnAddNewGroup.TabIndex = 21;
-            this.btnAddNewGroup.Text = "Añadir Nuevo Grupo de Assets";
+            this.btnAddNewGroup.Text = "Añadir Nuevo Grupo de OA";
             this.btnAddNewGroup.UseVisualStyleBackColor = true;
             this.btnAddNewGroup.Click += new System.EventHandler(this.btnAddNewGroup_Click);
             // 
@@ -230,7 +232,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "CargarAssets";
-            this.Text = "Cargar Assets";
+            this.Text = "Cargar Objetos de Aprendizaje";
             this.Load += new System.EventHandler(this.CargarAssets_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

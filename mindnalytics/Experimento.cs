@@ -47,28 +47,49 @@ namespace mindnalytics
 
 
         public bool wait = true;
+        public bool randomizado = false;
+        Random randomOA = new Random();
         public void getElementos()
         {
-            
 
+            
             if (estudioAbierto.ListaItemsEstudio.Count != 0){
 
-            
+                
                 if (estudioAbierto.ListaItemsEstudio.First().Tipo == "GA")
                 {
-                    
+                    if (randomizado == true)
+                    {
+                        int numeroOARandom = randomOA.Next(0,9);
+                        Console.WriteLine("Se randomizo "+numeroOARandom);
+                        if(numeroOARandom>=5){
+                            ObjetosAnalisisScores objAnSc = new ObjetosAnalisisScores(estudioAbierto, sujetoPrueba, this, getGrupoAssets(estudioAbierto.ListaItemsEstudio[0].Nombre));
+                        }
+
+                        else
+                        {
+                            ObjetosAnalisisScores objAnSc = new ObjetosAnalisisScores(estudioAbierto, sujetoPrueba, this, getGrupoAssets(estudioAbierto.ListaItemsEstudio[1].Nombre));
+
+                        }
+                        randomizado = false;
+                    }
+                    else { 
                     //Experimento experimento1 = new Experimento(estudioAbierto, sujetoPrueba,this);
+                    Console.WriteLine("no se randomizo");
+
                     ObjetosAnalisisScores objAnSc = new ObjetosAnalisisScores(estudioAbierto, sujetoPrueba, this, getGrupoAssets(estudioAbierto.ListaItemsEstudio.First().Nombre));
+                    
                     //ImagenOA imgOA = new ImagenOA(this);
                     //imgOA.Show();
-                
+                    }
                 
                 }
                 else if (estudioAbierto.ListaItemsEstudio.First().Tipo == "N")
                 {
-
+                    randomizado = true;
                     ImagenNarrativa iNarr = new ImagenNarrativa(this, getNarrativa(estudioAbierto.ListaItemsEstudio.First().Nombre));
                     iNarr.Show();
+                    
                 }
                 else
                 {

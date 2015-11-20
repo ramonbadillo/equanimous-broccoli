@@ -86,16 +86,18 @@ namespace mindnalytics
                 expe.getElementos();
             }
         }
-
+        Random random = new Random();
         private void setIOA()
         {
             if (listaAssets.Count > 0)
-            { 
+            {
+            int randomImagen = random.Next(0,listaAssets.Count-1);
             IOA.Show();
-            IOA.setImage(listaAssets.First());
+               
+            IOA.setImage(listaAssets[randomImagen]);
             currentAsset = listaAssets.First();
             IN.Hide();
-            listaAssets.RemoveAt(0);
+            listaAssets.RemoveAt(randomImagen);
             }
             else
             {

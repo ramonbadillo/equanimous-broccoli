@@ -39,12 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.tablaAssets = new System.Windows.Forms.DataGridView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Y = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numZOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaAssets)).BeginInit();
@@ -67,7 +67,7 @@
             this.groupBox1.Size = new System.Drawing.Size(834, 440);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Grupo de Assets # ";
+            this.groupBox1.Text = "Grupo de Objetos de Aprendizaje # ";
             // 
             // btnDeleteGroup
             // 
@@ -78,6 +78,7 @@
             this.btnDeleteGroup.TabIndex = 38;
             this.btnDeleteGroup.Text = "Eliminar Grupo de Assets";
             this.btnDeleteGroup.UseVisualStyleBackColor = true;
+            this.btnDeleteGroup.Visible = false;
             this.btnDeleteGroup.Click += new System.EventHandler(this.btnDeleteGroup_Click);
             // 
             // btnDwnAsset
@@ -89,6 +90,7 @@
             this.btnDwnAsset.TabIndex = 37;
             this.btnDwnAsset.Text = "Dwn";
             this.btnDwnAsset.UseVisualStyleBackColor = true;
+            this.btnDwnAsset.Visible = false;
             this.btnDwnAsset.Click += new System.EventHandler(this.btnDwnAsset_Click);
             // 
             // btnUpAsset
@@ -100,6 +102,7 @@
             this.btnUpAsset.TabIndex = 36;
             this.btnUpAsset.Text = "Up";
             this.btnUpAsset.UseVisualStyleBackColor = true;
+            this.btnUpAsset.Visible = false;
             this.btnUpAsset.Click += new System.EventHandler(this.btnUpAsset_Click);
             // 
             // btnRmvAsset
@@ -132,6 +135,7 @@
             this.numZOrder.Size = new System.Drawing.Size(77, 22);
             this.numZOrder.TabIndex = 33;
             this.numZOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numZOrder.Visible = false;
             // 
             // label3
             // 
@@ -142,6 +146,7 @@
             this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 32;
             this.label3.Text = "Orden Z :";
+            this.label3.Visible = false;
             // 
             // label1
             // 
@@ -181,6 +186,10 @@
             this.tablaAssets.Size = new System.Drawing.Size(676, 318);
             this.tablaAssets.TabIndex = 27;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
@@ -191,18 +200,21 @@
             // 
             this.X.HeaderText = "X";
             this.X.Name = "X";
+            this.X.Visible = false;
             this.X.Width = 40;
             // 
             // Y
             // 
             this.Y.HeaderText = "Y";
             this.Y.Name = "Y";
+            this.Y.Visible = false;
             this.Y.Width = 40;
             // 
             // Time
             // 
             this.Time.HeaderText = "Time (S)";
             this.Time.Name = "Time";
+            this.Time.Visible = false;
             // 
             // Path
             // 
@@ -210,10 +222,6 @@
             this.Path.Name = "Path";
             this.Path.ReadOnly = true;
             this.Path.Width = 800;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // GrupoAssets
             // 

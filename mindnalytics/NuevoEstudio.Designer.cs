@@ -37,7 +37,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(499, 19);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(83, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(408, 22);
             this.textBox1.TabIndex = 1;
@@ -75,9 +75,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NuevoEstudio";
-            this.Text = "Nuevo Estudio";
+            this.Text = "Nuevo Experimento";
             this.ResumeLayout(false);
             this.PerformLayout();
 
